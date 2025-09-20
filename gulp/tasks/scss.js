@@ -6,53 +6,55 @@ import autoprefixer from "gulp-autoprefixer";
 const sass = gulpSass(dartSass);
 
 export const scss = () => {
-  return app.gulp
-    .src(app.path.src.scss, { sourcemaps: app.isDev })
+  return (
+    app.gulp
+      .src(app.path.src.scss, { sourcemaps: app.isDev })
 
-    .pipe(
-      app.plugins.plumber(
-        app.plugins.notify.onError({
-          title: "SCSS",
-          message: "Error: <%= error.message %>",
+      .pipe(
+        app.plugins.plumber(
+          app.plugins.notify.onError({
+            title: "SCSS",
+            message: "Error: <%= error.message %>",
+          })
+        )
+      )
+      .pipe(
+        sass({
+          outputStyle: "expanded",
         })
       )
-    )
-    .pipe(
-      sass({
-        outputStyle: "expanded",
-      })
-    )
-    .pipe(
-      app.plugins.replace(
-        /@assets\//g,
-        app.isBuild ? "/InteriorStudio/assets/" : "../assets/"
-      )
-    )
+      // .pipe(
+      //   app.plugins.replace(
+      //     /@assets\//g,
+      //     app.isBuild ? "/InteriorStudio/assets/" : "../assets/"
+      //   )
+      // )
 
-    .pipe(
-      app.plugins.if(
-        app.isBuild,
-        autoprefixer({
-          grid: true,
-          overrideBrowserslist: ["last 3 versions"],
-          cascade: true,
+      .pipe(
+        app.plugins.if(
+          app.isBuild,
+          autoprefixer({
+            grid: true,
+            overrideBrowserslist: ["last 3 versions"],
+            cascade: true,
+          })
+        )
+      )
+      .pipe(
+        rename(function (path) {
+          const pageName = path.dirname.split(path.sep).pop();
+          path.basename = pageName;
+          path.dirname = "";
+          path.extname = ".css";
         })
       )
-    )
-    .pipe(
-      rename(function (path) {
-        const pageName = path.dirname.split(path.sep).pop();
-        path.basename = pageName;
-        path.dirname = "";
-        path.extname = ".css";
-      })
-    )
-    .pipe(app.gulp.dest(app.path.build.css))
-    .pipe(
-      rename({
-        suffix: ".min",
-      })
-    )
-    .pipe(app.gulp.dest(app.path.build.css))
-    .pipe(app.plugins.browserSync.stream());
+      .pipe(app.gulp.dest(app.path.build.css))
+      .pipe(
+        rename({
+          suffix: ".min",
+        })
+      )
+      .pipe(app.gulp.dest(app.path.build.css))
+      .pipe(app.plugins.browserSync.stream())
+  );
 };

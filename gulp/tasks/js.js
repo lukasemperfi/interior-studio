@@ -17,13 +17,13 @@ export const js = () => {
         mode: app.isBuild ? "production" : "development",
         devtool: app.isBuild ? false : "source-map",
         entry: {
-          home: "./src/pages/home/index.js",
+          home: "./src/pages/home/home.js",
           about: "./src/pages/about/index.js",
         },
         output: {
           filename: "[name].min.js",
 
-          publicPath: app.isBuild ? "/InteriorStudio/js" : "/js",
+          // publicPath: app.isBuild ? "/InteriorStudio/js" : "/js",
         },
         module: {
           rules: [

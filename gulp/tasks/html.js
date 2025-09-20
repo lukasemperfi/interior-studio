@@ -23,6 +23,11 @@ export const html = () => {
       })
     )
     .pipe(app.plugins.replace(/@assets\//g, "assets/"))
+    .pipe(
+      app.plugins.replace(/@js\/([^"]+)\.js"/g, (match, scriptName) => {
+        return `js/${scriptName}.min.js"`;
+      })
+    )
     .pipe(app.gulp.dest(app.path.build.html))
     .pipe(app.plugins.browserSync.stream());
 };
