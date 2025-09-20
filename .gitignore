@@ -1,0 +1,8 @@
+node_modules
+dist
+pivot-table.md
+technical-task.pdf
+
+*.local
+.vscode/*
+!.vscode/extensions.json
