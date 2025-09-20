@@ -23,13 +23,6 @@ export const scss = () => {
           outputStyle: "expanded",
         })
       )
-      // .pipe(
-      //   app.plugins.replace(
-      //     /@assets\//g,
-      //     app.isBuild ? "/InteriorStudio/assets/" : "../assets/"
-      //   )
-      // )
-
       .pipe(
         app.plugins.if(
           app.isBuild,

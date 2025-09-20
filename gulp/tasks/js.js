@@ -22,8 +22,6 @@ export const js = () => {
         },
         output: {
           filename: "[name].min.js",
-
-          // publicPath: app.isBuild ? "/InteriorStudio/js" : "/js",
         },
         module: {
           rules: [
