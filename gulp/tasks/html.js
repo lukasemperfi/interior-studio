@@ -1,5 +1,6 @@
 import fileInclude from "gulp-file-include";
 import rename from "gulp-rename";
+import nunjucksRender from "gulp-nunjucks-render";
 
 export const html = () => {
   return app.gulp
@@ -13,6 +14,11 @@ export const html = () => {
       )
     )
     .pipe(fileInclude())
+    .pipe(
+      nunjucksRender({
+        path: ["./src"],
+      })
+    )
     .pipe(
       rename(function (path) {
         const pageName = path.dirname.split(path.sep).pop();
@@ -28,6 +34,7 @@ export const html = () => {
         return `js/${scriptName}.min.js"`;
       })
     )
+
     .pipe(app.gulp.dest(app.path.build.html))
     .pipe(app.plugins.browserSync.stream());
 };

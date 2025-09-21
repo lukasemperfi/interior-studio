@@ -9,9 +9,11 @@
 </head>
 
 <body>
+    {% from "./ui/icons.html" import icon %}
+    {{ icon() }}
     <h1>Hello World</h1>
+    {% include "./ui/button.html" %}
 </body>
-
 <script src="@js/home.js"></script>
 
 </html>
