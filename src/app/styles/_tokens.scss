@@ -1,0 +1,49 @@
+:root {
+  /* Constants */
+
+  /* Fonts */
+  --font-family-primary: "Montserrat", sans-serif;
+
+  /* Font Sizes */
+  --font-size-275: 11px;
+  --font-size-350: 14px;
+  --font-size-400: 16px;
+  --font-size-650: 26px;
+  --font-size-800: 32px;
+  --font-size-900: 36px;
+  --font-size-1000: 40px;
+  --font-size-1100: 44px;
+  --font-size-1200: 48px;
+  --font-size-1400: 56px;
+
+  /* Colors */
+  --white: #ffffff;
+  --black: #000000;
+
+  --gray-100: #f2f2f2;
+  --gray-500: #828282;
+  --gray-950: #080808;
+
+  /*Spaces*/
+  --space-150: 6px;
+  --space-200: 8px;
+
+  // #C4C4C4 dropdown
+  // #f2f2f2 background in part of section
+
+  /*Semantic Tokens*/
+
+  /*Text Colors*/
+  --color-text-on-dark-surface: var(--gray-100);
+  --color-text-on-light-surface: var(--gray-950);
+
+  /*Font Sizes*/
+  --font-size-h1: var(--font-size-1000);
+  --font-size-h2: var(--font-size-650);
+  --font-size-body: var(--font-size-350);
+  --font-size-label: var(--font-size-275);
+  --font-size-caption: var(--font-size-275);
+
+  /*Gaps*/
+  --gap-card-xs: var(--space-150);
+}
