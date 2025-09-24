@@ -1,3 +1,17 @@
-h1 {
-  font-size: 56px;
+body {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-350);
+  background-color: var(--color-background-primary);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(110, 109, 109);
+}
+
+.container {
+  max-width: var(--container-max-width);
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+  margin: 0 auto;
+  padding-block: 0;
 }

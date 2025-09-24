@@ -1,0 +1,20 @@
+.nav-menu {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+  }
+
+  &__link {
+    font-family: var(--font-family-primary);
+    font-weight: 600;
+    font-size: var(--font-size-label);
+    letter-spacing: 0.06em;
+    color: var(--color-text-primary);
+    transition: color 0.3s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

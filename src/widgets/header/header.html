@@ -1,0 +1,33 @@
+{% from "shared/ui/nav-menu/nav-menu.html" import nav_menu %}
+{% from "shared/ui/button/button.html" import button %}
+
+<header class="header">
+    <div class="container">
+        <div class="header__wrapper">
+            <a class="header__logo" href="/">logo</a>
+            <div class="header__lang">
+                <select id="lang-select" name="lang" class="header__lang-select" aria-label="Language">
+                    <option value="en" selected>En</option>
+                    <option value="ua">Ua</option>
+                </select>
+            </div>
+            <div class="header__menu">
+                <button class="header__menu-button menu-button" aria-label="Toggle menu" aria-expanded="false">
+                    <div class="menu-button__hamburger hamburger">
+                        <span class="hamburger__line hamburger__line--top"></span>
+                        <span class="hamburger__line hamburger__line--bottom"></span>
+                    </div>
+                    <span class="menu-button__text">Menu</span>
+                </button>
+                <div class="header__nav-menu">
+                    {{ nav_menu() }}
+                </div>
+            </div>
+            <div class="header__actions">
+                {{ button("Send Request", "button--primary button--white") }}
+            </div>
+
+        </div>
+    </div>
+    </div>
+</header>

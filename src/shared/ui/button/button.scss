@@ -1,0 +1,33 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 34px;
+  padding-block: 13px;
+  font-family: var(--font-family-primary);
+  font-weight: 600;
+  font-size: var(--font-size-label);
+  letter-spacing: 0.06em;
+  transition: all 0.3s ease;
+
+  &--primary {
+    background-color: transparent;
+    border-width: var(--border-width-025);
+    border-style: solid;
+  }
+
+  &--white {
+    color: var(--color-text-secondary);
+    border-color: var(--color-border-secondary);
+
+    &:hover {
+      color: var(--color-text-primary);
+      background-color: var(--color-background-primary);
+    }
+  }
+
+  &--black {
+    color: var(--color-text-primary);
+    border-color: var(--color-border-primary);
+  }
+}

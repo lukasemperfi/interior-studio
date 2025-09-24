@@ -1,9 +1,6 @@
 :root {
   /* Constants */
 
-  /* Fonts */
-  --font-family-primary: "Montserrat", sans-serif;
-
   /* Font Sizes */
   --font-size-275: 11px;
   --font-size-350: 14px;
@@ -20,7 +17,7 @@
   --white: #ffffff;
   --black: #000000;
 
-  --gray-100: #f2f2f2;
+  --gray-100: #fafafa;
   --gray-500: #828282;
   --gray-950: #080808;
 
@@ -28,14 +25,24 @@
   --space-150: 6px;
   --space-200: 8px;
 
-  // #C4C4C4 dropdown
-  // #f2f2f2 background in part of section
+  /*Border*/
+  --border-width-025: 1px;
 
   /*Semantic Tokens*/
+  /* Fonts */
+  --font-family-primary: "Montserrat", sans-serif;
 
   /*Text Colors*/
-  --color-text-on-dark-surface: var(--gray-100);
-  --color-text-on-light-surface: var(--gray-950);
+  --color-text-primary: var(--gray-950);
+  --color-text-secondary: var(--gray-100);
+
+  /*Background Colors*/
+  --color-background-primary: var(--gray-100);
+  --color-background-secondary: var(--gray-950);
+
+  /*Border*/
+  --color-border-primary: var(--gray-950);
+  --color-border-secondary: var(--gray-100);
 
   /*Font Sizes*/
   --font-size-h1: var(--font-size-1000);
@@ -46,4 +53,23 @@
 
   /*Gaps*/
   --gap-card-xs: var(--space-150);
+
+  /*Z-Indexes*/
+  --z-index-sticky: 100;
+
+  /*Container*/
+  --container-max-width: 1440px;
+  --container-padding: 24px;
+
+  @media (min-width: 768px) {
+    --container-padding: 48px;
+  }
+
+  @media (min-width: 1024px) {
+    --container-padding: 56px;
+  }
+
+  @media (min-width: 1440px) {
+    --container-padding: 64px;
+  }
 }
