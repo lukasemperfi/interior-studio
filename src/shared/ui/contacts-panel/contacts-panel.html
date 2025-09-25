@@ -1,0 +1,40 @@
+{% import "../../ui/icons/icons.html" as icons %}
+
+{% macro contacts_panel() %}
+<div class="contacts-panel">
+    <div class="container">
+        <div class="contacts-panel__wrapper">
+            <div class="contacts-panel__socials socials">
+                <a href="#" class="contacts-panel__social">Fb</a>
+                <a href="#" class="contacts-panel__social">In</a>
+                <a href="#" class="contacts-panel__social">Be</a>
+            </div>
+            <div class="contacts-panel__city">
+
+                <div class="custom-select">
+                    {{ icons.geolocation() }}
+                    <select class="custom-select__select" name="city" aria-label="Choose city">
+                        <option value="berlin">Berlin</option>
+                        <option value="warsaw">Warsaw</option>
+                        <option value="krakow">Krakow</option>
+                    </select>
+                    {{ icons.arrowDown() }}
+
+                </div>
+
+
+            </div>
+            <div class="contacts-panel__info">
+                <div class="contacts-panel__phone">
+                    <a href="tel:+380991234567" class="contacts-panel__phone-link">+380935705222</a>
+                </div>
+                <div class="contacts-panel__email">
+                    <a href="mailto:info@hi-light.pl" class="contacts-panel__email-link">info@hi-light.pl</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+{% endmacro %}

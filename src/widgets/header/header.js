@@ -8,6 +8,8 @@ function initMenuButton() {
   const hamburger = document.querySelector(".hamburger");
   const header = document.querySelector(".header");
   const menuButtonText = document.querySelector(".menu-button__text");
+  const navMenuMobile = document.querySelector(".nav-menu-mobile");
+
   if (!menuButton) {
     return;
   }
@@ -17,6 +19,8 @@ function initMenuButton() {
     menuButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
     header.classList.toggle("is-open");
     menuButtonText.classList.toggle("is-open");
+    navMenuMobile.classList.toggle("is-open");
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
   });
 }
 

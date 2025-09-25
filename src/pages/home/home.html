@@ -142,6 +142,30 @@
     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere doloribus architecto provident ex illum expedita
     quos sed laudantium recusandae tempore suscipit quisquam, eos dolor aperiam voluptas nobis repellat ipsa
     praesentium.
+    <div id="portal-root">
+        {% from "shared/ui/nav-menu/nav-menu.html" import nav_menu %}
+        {% from "shared/ui/button/button.html" import button %}
+        {% from "shared/ui/contacts-panel/contacts-panel.html" import contacts_panel %}
+
+        {% set mobileMenuItems = [
+        { "href": "/", "name": "Home" },
+        { "href": "#", "name": "Projects" },
+        { "href": "#", "name": "About us" },
+        { "href": "#", "name": "Blog" },
+        { "href": "#", "name": "Contacts" }
+        ] %}
+        <div class="nav-menu-mobile">
+            <div class="nav-menu-mobile__content">
+                <div class="nav-menu-mobile__main">
+                    {{ nav_menu(mobileMenuItems, "nav-menu--mobile") }}
+                    {{ button("Send Request", "button--primary button--white") }}
+                </div>
+                <div class="nav-menu-mobile__footer">
+                    {{ contacts_panel() }}
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script src="@js/home.js"></script>
 

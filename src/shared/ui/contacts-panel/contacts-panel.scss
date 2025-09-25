@@ -1,0 +1,141 @@
+@use "../../../app/styles/_variables" as *;
+
+.contacts-panel {
+  --info-gap: 6px;
+
+  @media (min-width: $breakpoint-sm) {
+    --info-gap: 32px;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    --info-gap: 40px;
+  }
+
+  margin-bottom: 20px;
+  font-family: var(--font-family-primary);
+  font-weight: 600;
+  font-size: var(--font-size-label);
+  letter-spacing: 0.06em;
+  text-align: right;
+  color: var(--color-text-secondary);
+
+  @media (min-width: $breakpoint-sm) {
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    margin-bottom: 40px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (min-width: $breakpoint-sm) {
+      justify-content: flex-start;
+    }
+  }
+
+  .socials {
+    display: none;
+
+    @media (min-width: $breakpoint-sm) {
+      display: flex;
+      margin-right: 64px;
+      gap: 15px;
+    }
+
+    @media (min-width: $breakpoint-md) {
+      margin-right: 79px;
+    }
+  }
+
+  &__city {
+    margin-right: var(--info-gap);
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--info-gap);
+
+    @media (min-width: $breakpoint-sm) {
+      flex-direction: row;
+    }
+  }
+}
+
+.contacts-panel {
+  .custom-select {
+    --select-border-radius: 9999px;
+
+    position: relative;
+    display: inline-block;
+    border-radius: var(--select-border-radius);
+
+    @media (min-width: $breakpoint-lg) {
+      background-color: rgb(250 250 250 / 50%);
+    }
+
+    > svg:first-child {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      color: currentColor;
+    }
+
+    > svg:last-child {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      color: currentColor;
+    }
+
+    &__select {
+      appearance: none;
+      background: transparent;
+      color: var(--color-text-secondary);
+      border: 1px solid var(--color-border-secondary);
+      border-radius: var(--select-border-radius);
+      font-weight: 600;
+      font-size: var(--font-size-label);
+      font-family: var(--font-family-primary);
+      padding-block: 4px;
+      padding-left: 27px;
+      padding-right: 38px;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+      &:hover {
+        border-color: rgba(255, 255, 255, 0.5);
+      }
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+
+      &::-ms-expand {
+        display: none;
+      }
+
+      option {
+        color: #000000;
+        background-color: rgb(250 250 250 / 50%);
+        font-size: 11px;
+        font-weight: 600;
+        font-family: "Montserrat", sans-serif;
+        letter-spacing: 0.06em;
+      }
+    }
+  }
+}

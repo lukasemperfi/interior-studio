@@ -1,18 +1,11 @@
-{% macro nav_menu() %}
-<nav class="nav-menu">
+{% macro nav_menu(items, class) %}
+<nav class="nav-menu {{ class }}">
     <ul class="nav-menu__list">
+        {% for item in items %}
         <li class="nav-menu__item">
-            <a href="#" class="nav-menu__link">Projects</a>
+            <a href="{{ item.href }}" class="nav-menu__link">{{ item.name }}</a>
         </li>
-        <li class="nav-menu__item">
-            <a href="#" class="nav-menu__link">About us</a>
-        </li>
-        <li class="nav-menu__item">
-            <a href="#" class="nav-menu__link">Blog</a>
-        </li>
-        <li class="nav-menu__item">
-            <a href="#" class="nav-menu__link">Contacts</a>
-        </li>
+        {% endfor %}
     </ul>
 </nav>
 {% endmacro %}

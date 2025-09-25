@@ -1,6 +1,15 @@
 {% from "shared/ui/nav-menu/nav-menu.html" import nav_menu %}
 {% from "shared/ui/button/button.html" import button %}
 
+{% set desktopMenuItems = [
+{ "href": "#", "name": "Projects" },
+{ "href": "#", "name": "About us" },
+{ "href": "#", "name": "Blog" },
+{ "href": "#", "name": "Contacts" }
+] %}
+
+
+
 <header class="header">
     <div class="container">
         <div class="header__wrapper">
@@ -20,7 +29,7 @@
                     <span class="menu-button__text">Menu</span>
                 </button>
                 <div class="header__nav-menu">
-                    {{ nav_menu() }}
+                    {{ nav_menu(desktopMenuItems, "nav-menu--desktop") }}
                 </div>
             </div>
             <div class="header__actions">
