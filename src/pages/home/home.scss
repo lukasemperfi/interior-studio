@@ -3,3 +3,9 @@
 @use "../../shared/ui/button/button.scss" as *;
 @use "../../shared/ui/nav-menu/nav-menu.scss" as *;
 @use "../../shared/ui/contacts-panel/contacts-panel.scss" as *;
+
+.hero {
+  background-color: #3c3c3c;
+  width: 100vw;
+  height: 100vh;
+}
