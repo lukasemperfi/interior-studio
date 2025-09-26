@@ -1,7 +1,6 @@
 node_modules
 dist
-pivot-table.md
-technical-task.pdf
+temp
 
 *.local
 .vscode/*
