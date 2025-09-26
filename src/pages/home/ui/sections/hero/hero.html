@@ -1,1 +1,15 @@
-<section class="hero">hero</section>
+{% from "shared/ui/picture/picture.html" import picture %}
+{%set images = {
+xs: "assets/images/home-page/hero/image-1.jpg",
+sm: "https://via.placeholder.com/300",
+md: "https://via.placeholder.com/450",
+lg: "https://via.placeholder.com/600"
+} %}
+
+<section class="hero">
+    <!-- {{ picture(images,{
+    alt: "hero",
+    class: "hero__image"
+    }
+    ) }} -->
+</section>

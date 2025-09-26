@@ -1,0 +1,9 @@
+{%macro picture(images, attributes)%}
+<picture>
+    <source srcset="{{images.lg}}" media="(min-width: 1440px)" type="image/jpeg">
+    <source srcset="{{images.md}}" media="(min-width: 1024px)" type="image/jpeg">
+    <source srcset="{{images.sm}}" media="(min-width: 768px)" type="image/jpeg">
+    <img src="{{images.xs}}" alt="{{attributes.alt}}" class="{{attributes.class}}"
+        loading="{{attributes.loading | default('lazy')}}">
+</picture>
+{%endmacro%}
