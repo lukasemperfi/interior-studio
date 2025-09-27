@@ -28,6 +28,10 @@ function initHeroSwiper() {
 function createSliderNav(container, slider) {
   const containerEl = document.querySelector(container);
 
+  if (!containerEl) {
+    return;
+  }
+
   const updateNavigation = () => {
     const currentSlide = slider.realIndex + 1;
     const totalSlides = slider.slides.length;
