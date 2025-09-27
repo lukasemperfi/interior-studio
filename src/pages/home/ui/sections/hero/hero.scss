@@ -46,6 +46,9 @@
 
   &__slider-nav {
     order: 1;
+    pointer-events: auto;
+    margin-bottom: -10px;
+    margin-left: -10px;
 
     @media (min-width: variables.$breakpoint-sm) {
       order: 2;
@@ -58,6 +61,10 @@
     @media (min-width: variables.$breakpoint-sm) {
       order: 1;
     }
+
+    .decorative-link {
+      pointer-events: auto;
+    }
   }
 
   &__title {
@@ -68,6 +75,7 @@
     color: var(--color-text-secondary);
     max-width: 270px;
     margin-bottom: 28px;
+    pointer-events: auto;
 
     @media (min-width: variables.$breakpoint-sm) {
       font-size: 44px;
@@ -114,15 +122,15 @@
     }
   }
 
+  .contacts-panel {
+    pointer-events: auto;
+  }
+
   &__content-item {
     width: 100%;
     height: 100%;
     pointer-events: none;
     overflow: hidden;
-
-    * {
-      pointer-events: auto;
-    }
   }
 
   &__content-item:nth-child(1) {
@@ -178,6 +186,7 @@
     transform: rotate(180deg);
     color: var(--color-text-secondary);
     max-height: 200px;
+    pointer-events: auto;
 
     @media (min-width: variables.$breakpoint-sm) {
       max-height: 354px;
