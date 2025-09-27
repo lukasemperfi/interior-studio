@@ -8,7 +8,7 @@ export const initHero = () => {
 
 function initHeroSwiper() {
   return initSwiper(".hero-swiper", {
-    slidesPerView: 1.17,
+    slidesPerView: 1.19,
     loop: true,
 
     breakpoints: {
