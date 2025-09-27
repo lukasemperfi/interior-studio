@@ -9,7 +9,6 @@ lg: "assets/images/home-page/hero/image-1-1440px.jpg"
 }%}
 
 <section class="hero">
-    <!-- <div class="hero__slider-nav"></div> -->
     <div class="swiper hero__swiper hero-swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -31,7 +30,15 @@ lg: "assets/images/home-page/hero/image-1-1440px.jpg"
         </div>
     </div>
     <div class="hero__content">
-        <div class="hero__content-item"></div>
+        <div class="hero__content-item">
+            <div class="hero__main">
+                <div class="hero__slider-nav"></div>
+                <div class="hero__title-block">
+                    <h1 class="hero__title">Thoughtful making of space</h1>
+                    {{decorative_link("#", "Discover more")}}
+                </div>
+            </div>
+        </div>
         <div class="hero__content-item">
             {{ contacts_panel() }}
         </div>

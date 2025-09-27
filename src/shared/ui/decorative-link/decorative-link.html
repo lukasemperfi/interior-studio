@@ -1,7 +1,7 @@
 {% macro decorative_link(href, text, class) %}
 <div class="decorative-link {{ class | default('decorative-link_primary') }}">
     <span class="decorative-link__line-left"></span>
-    <a href="{{ href }}" class="decorative-link__link">{{ text }}</a>
+    <a href="{{ href | default('#') }}" class="decorative-link__link">{{ text | default('Decorative Link') }}</a>
     <span class="decorative-link__line-right"></span>
 </div>
 {% endmacro %}
