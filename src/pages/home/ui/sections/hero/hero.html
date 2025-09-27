@@ -1,5 +1,6 @@
 {% from "shared/ui/picture/picture.html" import picture %}
 {% from "shared/ui/decorative-link/decorative-link.html" import decorative_link %}
+{% from "shared/ui/contacts-panel/contacts-panel.html" import contacts_panel %}
 {%set images = {
 xs: "assets/images/home-page/hero/image-1-375px.jpg",
 sm: "assets/images/home-page/hero/image-1-768px.jpg",
@@ -30,14 +31,15 @@ lg: "assets/images/home-page/hero/image-1-1440px.jpg"
         </div>
     </div>
     <div class="hero__content">
+        <div class="hero__content-item"></div>
         <div class="hero__content-item">
-            {{decorative_link("/", "Discover more")}}
+            {{ contacts_panel() }}
         </div>
-        <div class="hero__content-item">2</div>
         <div class="hero__content-item">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus ducimus
-                incidunt et blanditiis accusamus. Incidunt nulla minus repellat optio, magnam quidem tenetur ratione.
-                Reiciendis provident, architecto eligendi quasi tempora officiis!</p>
+            <div class="hero__content-vertical-text vertical-text">
+                <div class="vertical-text__item-1">Next Project</div>
+                <div class="vertical-text__item-2">Perfect proportions</div>
+            </div>
         </div>
     </div>
 
