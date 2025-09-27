@@ -14,7 +14,9 @@ lg: "assets/images/home-page/hero/image-1-1440px.jpg"
             <div class="swiper-slide">
                 {{picture(images, {
                 class: "hero-swiper__image",
-                alt: "hero-image-1"
+                alt: "hero-image-1",
+                loading: "eager",
+                fetchpriority: "high"
                 })}}
             </div>
             <div class="swiper-slide">

@@ -10,6 +10,7 @@
     <source srcset="{{images.sm}}" media="(min-width: 768px)" type="image/jpeg">
     {% endif %}
     <img src="{{images.xs}}" alt="{{attributes.alt}}" class="{{attributes.class}}"
-        loading="{{attributes.loading | default('lazy')}}">
+        loading="{{attributes.loading | default('lazy')}}"
+        fetchpriority="{{attributes.fetchpriority | default('auto')}}">
 </picture>
 {%endmacro%}
