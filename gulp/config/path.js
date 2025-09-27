@@ -18,6 +18,8 @@ export const path = {
     html: `${srcFolder}/pages/*/*.html`,
     scss: `${srcFolder}/pages/*/*.scss`,
     js: `${srcFolder}/pages/*/*.js`,
+    swiperCss: `${srcFolder}/shared/lib/swiper/*.css`,
+    swiperJs: `${srcFolder}/shared/lib/swiper/*.js`,
   },
   watch: {
     files: `${srcFolder}/files/**/*.*`,

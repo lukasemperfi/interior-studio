@@ -1,0 +1,42 @@
+@use "../../../../../app/styles/variables" as variables;
+
+.slider-nav {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  &__current,
+  &__total {
+    font-family: var(--font-family-primary);
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    color: var(--color-text-secondary);
+  }
+
+  &__progress {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.32);
+    width: 88px;
+
+    @media (min-width: variables.$breakpoint-sm) {
+      width: 148px;
+    }
+
+    @media (min-width: variables.$breakpoint-lg) {
+      width: 186px;
+    }
+  }
+
+  &__progress-bar {
+    height: 1px;
+    background-color: var(--color-background-primary);
+    transition: width 0.3s ease-in-out;
+  }
+
+  &__prev {
+  }
+
+  &__next {
+  }
+}
