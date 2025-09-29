@@ -1,0 +1,30 @@
+@use "../../../app/styles/variables" as variables;
+
+.quote {
+  display: flex;
+  gap: 30px;
+
+  &__quotation-mark {
+    font-family: var(--font-family-secondary);
+    font-weight: 700;
+    font-size: 25px;
+    color: var(--color-text-primary);
+    line-height: 40px;
+
+    @media (min-width: variables.$breakpoint-lg) {
+      font-size: 36px;
+    }
+  }
+
+  &__text {
+    font-family: var(--font-family-primary);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 27px;
+    color: var(--color-text-primary);
+
+    @media (min-width: variables.$breakpoint-lg) {
+      font-size: 20px;
+    }
+  }
+}

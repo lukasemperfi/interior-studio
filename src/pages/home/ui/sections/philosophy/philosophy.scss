@@ -1,0 +1,255 @@
+@use "../../../../../app/styles/variables" as variables;
+
+.philosophy {
+  padding-top: 80px;
+  padding-bottom: 66px;
+
+  @media (min-width: variables.$breakpoint-sm) {
+    padding-top: 103px;
+    padding-bottom: 68px;
+  }
+
+  @media (min-width: variables.$breakpoint-md) {
+    padding-top: 124px;
+    padding-bottom: 16px;
+  }
+
+  @media (min-width: variables.$breakpoint-lg) {
+    padding-top: 140px;
+    padding-bottom: 51px;
+  }
+
+  .container {
+    @media (min-width: variables.$breakpoint-sm) {
+      max-width: 520px;
+      padding: 0;
+    }
+
+    @media (min-width: variables.$breakpoint-md) {
+      max-width: 691px;
+    }
+
+    @media (min-width: variables.$breakpoint-lg) {
+      max-width: 1050px;
+    }
+
+    @media (min-width: 1650px) {
+      max-width: 1440px;
+      padding-inline: 64px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+
+    @media (min-width: variables.$breakpoint-md) {
+      grid-template-columns: 344px 163px 184px;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        "item-1 item-1 item-2"
+        "item-3 item-4 item-4";
+      row-gap: 67px;
+    }
+
+    @media (min-width: variables.$breakpoint-lg) {
+      row-gap: 0;
+      grid-template-columns: 516px 533px;
+      grid-template-rows: 1fr 47px 1fr;
+      grid-template-areas:
+        "item-1 item-2"
+        "item-3 item-2"
+        "item-3 item-4";
+    }
+
+    @media (min-width: 1650px) {
+      position: relative;
+    }
+  }
+
+  .item-1 {
+    padding-bottom: 80px;
+
+    @media (min-width: variables.$breakpoint-sm) {
+      padding-bottom: 65px;
+    }
+
+    @media (min-width: variables.$breakpoint-md) {
+      grid-area: item-1;
+      padding-bottom: 10px;
+      padding-top: 56px;
+      // padding-right: 78px;
+    }
+
+    @media (min-width: variables.$breakpoint-lg) {
+      padding-top: 80px;
+    }
+
+    &__main {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 25px;
+
+      @media (min-width: variables.$breakpoint-md) {
+        max-width: clamp(429px, 41.89vw, 515px);
+      }
+
+      @media (min-width: variables.$breakpoint-lg) {
+        margin-bottom: 48px;
+      }
+    }
+
+    &__title {
+      font-family: var(--font-family-primary);
+      font-weight: 700;
+      font-size: var(--font-size-h2);
+      color: var(--color-text-primary);
+
+      @media (min-width: variables.$breakpoint-lg) {
+        margin-bottom: 11px;
+      }
+    }
+
+    &__paragraph {
+      font-family: var(--font-family-primary);
+      font-weight: 300;
+      font-size: var(--font-size-body);
+      line-height: 24px;
+      color: var(--color-text-primary);
+    }
+  }
+
+  .item-2 {
+    --item-2-height-md: clamp(439px, 42.87vw, 536px);
+    --item-2-height-lg: 607px;
+
+    display: none;
+
+    @media (min-width: variables.$breakpoint-md) {
+      grid-area: item-2;
+      display: block;
+      height: var(--item-2-height-md);
+    }
+
+    @media (min-width: variables.$breakpoint-lg) {
+      height: var(--item-2-height-lg);
+    }
+
+    &__image {
+      @media (min-width: variables.$breakpoint-md) {
+        aspect-ratio: 349/439;
+        height: var(--item-2-height-md);
+        object-fit: cover;
+        position: absolute;
+        right: 0;
+      }
+
+      @media (min-width: variables.$breakpoint-lg) {
+        aspect-ratio: 513/607;
+        height: var(--item-2-height-lg);
+      }
+    }
+  }
+
+  .item-3 {
+    @media (min-width: variables.$breakpoint-md) {
+      grid-area: item-3;
+    }
+
+    &__image-wrapper {
+      position: relative;
+      //   border: 1px solid blue;
+      width: 100%;
+      height: clamp(281px, 74.9vw, 331px);
+
+      @media (min-width: variables.$breakpoint-md) {
+        height: clamp(331px, 19.92vw, 331px);
+      }
+
+      @media (min-width: variables.$breakpoint-lg) {
+        height: clamp(518px, 35.97vw, 518px);
+      }
+
+      // @media (min-width: variables.$breakpoint-md) {
+      //   aspect-ratio: 190/237;
+      //   width: clamp(190px, 18.55vw, 190px);
+      // }
+
+      // @media (min-width: variables.$breakpoint-lg) {
+      //   aspect-ratio: 316/393;
+      //   width: clamp(316px, 21.94vw, 316px);
+      // }
+    }
+
+    &__image-1 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      aspect-ratio: 131/163;
+      width: clamp(131px, 34.93vw, 153px);
+      object-fit: cover;
+
+      @media (min-width: variables.$breakpoint-sm) {
+        width: clamp(153px, 19.92vw, 190px);
+      }
+
+      @media (min-width: variables.$breakpoint-md) {
+        aspect-ratio: 190/237;
+        width: clamp(190px, 18.55vw, 190px);
+      }
+
+      @media (min-width: variables.$breakpoint-lg) {
+        aspect-ratio: 316/393;
+        width: clamp(316px, 21.94vw, 316px);
+      }
+    }
+
+    &__image-2 {
+      position: absolute;
+      top: 0;
+      left: 19.3%;
+      z-index: 2;
+      aspect-ratio: 264/162;
+      width: clamp(264px, 70.4vw, 383px);
+      object-fit: cover;
+
+      @media (min-width: variables.$breakpoint-sm) {
+        left: 26.3%;
+        aspect-ratio: 383/235;
+      }
+
+      @media (min-width: variables.$breakpoint-md) {
+        left: 45%;
+        aspect-ratio: 190/117;
+        width: clamp(190px, 18.55vw, 190px);
+      }
+
+      @media (min-width: variables.$breakpoint-lg) {
+        left: 46%;
+        aspect-ratio: 279/172;
+        width: clamp(279px, 19.37vw, 279px);
+      }
+    }
+  }
+
+  .item-4 {
+    padding-top: 76px;
+
+    @media (min-width: variables.$breakpoint-sm) {
+      padding-top: 20px;
+      padding-left: 196px;
+    }
+
+    @media (min-width: variables.$breakpoint-md) {
+      padding-top: 149px;
+      padding-left: 21px;
+      grid-area: item-4;
+    }
+
+    @media (min-width: variables.$breakpoint-lg) {
+      padding-top: 232px;
+      padding-left: 84px;
+    }
+  }
+}

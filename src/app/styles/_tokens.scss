@@ -59,6 +59,10 @@
     --font-size-h2: 32px;
   }
 
+  @media (min-width: 1440px) {
+    --font-size-h2: 36px;
+  }
+
   /*Gaps*/
   --gap-card-xs: var(--space-150);
 
