@@ -9,6 +9,7 @@
   font-size: var(--font-size-label);
   letter-spacing: 0.06em;
   transition: all 0.3s ease;
+  width: fit-content;
 
   &--primary {
     background-color: transparent;
@@ -29,5 +30,26 @@
   &--black {
     color: var(--color-text-primary);
     border-color: var(--color-border-primary);
+  }
+
+  &--secondary {
+    border: none;
+  }
+
+  &--secondary-white {
+    border: none;
+    color: var(--color-text-primary);
+    background-color: var(--color-background-primary);
+
+    &:hover {
+      color: var(--color-text-secondary);
+      background-color: var(--gray-100-opacity-32);
+    }
+  }
+
+  &--secondary-black {
+    border: none;
+    color: var(--color-text-secondary);
+    background-color: var(--color-background-secondary);
   }
 }

@@ -1,5 +1,7 @@
 {% from "shared/ui/project-card/project-card.html" import projectCard %}
 {% from "shared/ui/picture/picture.html" import picture %}
+{% from "shared/ui/button/button.html" import button %}
+
 {% set projects = [
 {
 id: 1,
@@ -70,6 +72,49 @@ lg: "assets/images/home-page/projects/image-5-1440px.jpg"
 }
 } %}
 
+{% set overlapingCards = [
+{
+id: 1,
+image: "assets/images/home-page/projects/stack-1.jpg"
+},
+{
+id: 2,
+image: "assets/images/home-page/projects/stack-2.jpg"
+},
+{
+id: 3,
+image: "assets/images/home-page/projects/stack-3.jpg"
+},
+{
+id: 4,
+image: "assets/images/home-page/projects/stack-4.jpg"
+},
+{
+id: 5,
+image: "assets/images/home-page/projects/stack-5.jpg"
+},
+{
+id: 6,
+image: "assets/images/home-page/projects/stack-6.jpg"
+},
+{
+id: 7,
+image: "assets/images/home-page/projects/stack-7.jpg"
+},
+{
+id: 8,
+image: "assets/images/home-page/projects/stack-8.jpg"
+},
+{
+id: 9,
+image: "assets/images/home-page/projects/stack-9.jpg"
+},
+{
+id: 10,
+image: "assets/images/home-page/projects/stack-10.jpg"
+}
+] %}
+
 
 <section class="projects">
     <div class="container">
@@ -106,9 +151,26 @@ lg: "assets/images/home-page/projects/image-5-1440px.jpg"
             </div>
         </div>
         <div class="projects__bottom">
-            <div class="overlaping-cards">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quidem debitis
-                ducimus nihil repellat? Eos praesentium officiis, neque cumque necessitatibus enim fuga quam nisi, rem
-                mollitia eveniet eaque sunt quod!</div>
+            <div class="overlaping-cards">
+                <div class="overlaping-cards__item-left">
+                    <div class="overlaping-cards__text-1">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </div>
+                </div>
+                <div class="overlaping-cards__item-right">
+                    <div class="overlaping-cards__text-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae
+                        posuere. Ut at luctus ligula. Nunc ante felis, aliquam eu enim sed, ornare pretium velit.
+                    </div>
+                    {{button("Make request", "button--secondary button--secondary-white")}}
+                </div>
+
+                <div class="overlaping-cards__cards cards">
+                    {% for card in overlapingCards %}
+                    <img src="{{card.image}}" alt="overlaping-cards" class="cards__image">
+                    {% endfor %}
+                </div>
+            </div>
         </div>
     </div>
 </section>
