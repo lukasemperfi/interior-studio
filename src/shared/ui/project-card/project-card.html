@@ -1,0 +1,28 @@
+{% from "../../ui/picture/picture.html" import picture %}
+{% from "../../ui/decorative-link/decorative-link.html" import decorativeLink %}
+{%macro projectCard(project)%}
+
+<div class="project-card">
+    {{picture(project.images, {
+    class: "project-card__image",
+    alt: project.title,
+    loading: "lazy"
+    })}}
+    <div class="project-card__content">
+        <div class="project-card__content-top">
+            <div class="info">
+                <div class="info__city">{{project.city}}</div>
+                <div class="info__date">{{project.date}}</div>
+                <div class="info__area">{{project.area}}</div>
+
+            </div>
+        </div>
+        <div class="project-card__content-bottom">
+            <div class="bottom-block">
+                <div class="bottom-block__title">{{project.title}}</div>
+                {{decorativeLink(project.link)}}
+            </div>
+        </div>
+    </div>
+</div>
+{%endmacro%}

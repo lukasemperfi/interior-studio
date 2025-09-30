@@ -1,0 +1,114 @@
+{% from "shared/ui/project-card/project-card.html" import projectCard %}
+{% from "shared/ui/picture/picture.html" import picture %}
+{% set projects = [
+{
+id: 1,
+title: "Residence by the lighthouse",
+images: {
+xs: "assets/images/home-page/projects/image-1-375px.jpg",
+sm: "assets/images/home-page/projects/image-1-768px.jpg",
+md: "assets/images/home-page/projects/image-1-1024px.jpg",
+lg: "assets/images/home-page/projects/image-1-1440px.jpg"
+},
+link: "https://via.placeholder.com/150",
+city: "Lodz",
+date: "16.10.2018",
+area: "80 sq.m"
+},
+{
+id: 2,
+title: "Minimalist style home",
+images: {
+xs: "assets/images/home-page/projects/image-2-375px.jpg",
+sm: "assets/images/home-page/projects/image-2-768px.jpg",
+md: "assets/images/home-page/projects/image-2-1024px.jpg",
+lg: "assets/images/home-page/projects/image-2-1440px.jpg"
+},
+link: "https://via.placeholder.com/150",
+city: "Lodz",
+date: "16.10.2018",
+area: "80 sq.m"
+},
+{
+id: 3,
+title: "Eyewear store interior",
+images: {
+xs: "assets/images/home-page/projects/image-3-375px.jpg",
+sm: "assets/images/home-page/projects/image-3-768px.jpg",
+md: "assets/images/home-page/projects/image-3-1024px.jpg",
+lg: "assets/images/home-page/projects/image-3-1440px.jpg"
+},
+link: "https://via.placeholder.com/150",
+city: "Lodz",
+date: "16.10.2018",
+area: "80 sq.m"
+},
+{
+id: 4,
+title: "House on a Hillside",
+images: {
+xs: "assets/images/home-page/projects/image-4-375px.jpg",
+sm: "assets/images/home-page/projects/image-4-768px.jpg",
+md: "assets/images/home-page/projects/image-4-1024px.jpg",
+lg: "assets/images/home-page/projects/image-4-1440px.jpg"
+},
+link: "https://via.placeholder.com/150",
+city: "Lodz",
+date: "16.10.2018",
+area: "80 sq.m"
+}
+] %}
+
+{% set seeMore = {
+link: "#",
+text: "See more 60 projects",
+images: {
+xs: "assets/images/home-page/projects/image-5-375px.jpg",
+sm: "assets/images/home-page/projects/image-5-768px.jpg",
+md: "assets/images/home-page/projects/image-5-1024px.jpg",
+lg: "assets/images/home-page/projects/image-5-1440px.jpg"
+}
+} %}
+
+
+<section class="projects">
+    <div class="container">
+        <div class="projects__top">
+            <div class="top-block">
+                <h2 class="top-block__title">
+                    Our Projects
+                </h2>
+                <p class="top-block__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae
+                    posuere. Ut at luctus ligula. Nunc ante felis, aliquam eu enim sed, ornare pretium velit.
+                </p>
+            </div>
+        </div>
+        <div class="projects__main">
+            <div class="projects__list projects-list">
+                {% for project in projects %}
+                <div class="projects-list__item">
+                    {{projectCard(project)}}
+                </div>
+                {% endfor %}
+                <div class="projects-list__item">
+                    <div class="see-more">
+                        <a href="{{seeMore.link}}" class="see-more__link">
+                            <div class="see-more__text">{{seeMore.text}}</div>
+                            {{picture(seeMore.images, {
+                            class: "see-more__image",
+                            alt: "see-more"
+                            })}}
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="projects__bottom">
+            <div class="overlaping-cards">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quidem debitis
+                ducimus nihil repellat? Eos praesentium officiis, neque cumque necessitatibus enim fuga quam nisi, rem
+                mollitia eveniet eaque sunt quod!</div>
+        </div>
+    </div>
+</section>
