@@ -1,0 +1,61 @@
+@use "../../../app/styles/variables" as variables;
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  // display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+
+  &_active {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: var(--color-background-secondary);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    background: var(--gray-200);
+    width: 100%;
+
+    @media (min-width: variables.$breakpoint-sm) {
+      width: clamp(558px, 72.66vw, 808px);
+    }
+
+    @media (min-width: variables.$breakpoint-md) {
+      width: clamp(808px, 78.9vw, 1046px);
+    }
+
+    @media (min-width: variables.$breakpoint-lg) {
+      width: 1046px;
+    }
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,10 @@
+{% macro modal(content, class) %}
+<div class="modal {{ class }}">
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+        <h3 class="modal__title">This is a title</h3>
+        <p class="modal__text">This text is inside the modal</p>
+    </div>
+    <button class="modal__close-btn">&times;</button>
+</div>
+{% endmacro %}
