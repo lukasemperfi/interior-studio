@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
   initHeader();
   initHero();
 
-  const contactModal = initModal(".modal_contact");
+  const makeRequestModal = initModal(".make-request-modal");
 
   addClickToAll(".make-request-btn", () => {
-    contactModal.open();
+    makeRequestModal.open();
   });
 });

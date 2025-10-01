@@ -14,12 +14,12 @@
   padding: 24px;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 
   &_active {
     opacity: 1;
     visibility: visible;
-    transition: all 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
   }
 
   &__overlay {
@@ -33,6 +33,8 @@
     z-index: 1;
     background: var(--gray-200);
     width: 100%;
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
 
     @media (min-width: variables.$breakpoint-sm) {
       width: clamp(558px, 72.66vw, 808px);

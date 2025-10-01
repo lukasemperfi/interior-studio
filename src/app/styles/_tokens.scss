@@ -25,6 +25,8 @@
   --gray-100-opacity-32: rgba(250, 250, 250, 0.32);
   --gray-950-opacity-32: rgba(8, 8, 8, 0.32);
 
+  --red-500: #ff0000;
+
   /*Spaces*/
   --space-150: 6px;
   --space-200: 8px;
@@ -39,6 +41,7 @@
   /*Text Colors*/
   --color-text-primary: var(--gray-950);
   --color-text-secondary: var(--gray-100);
+  --color-text-error: var(--red-500);
 
   /*Background Colors*/
   --color-background-primary: var(--gray-100);

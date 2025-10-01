@@ -1,0 +1,70 @@
+.select {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  &__label {
+    font-size: 11px;
+    color: var(--color-text-primary);
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 3px;
+  }
+
+  &__control {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0;
+    width: 100%;
+    appearance: none;
+    cursor: pointer;
+
+    font-family: var(--font-family-primary);
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: var(--color-text-primary);
+
+    &::placeholder {
+      color: var(--gray-500);
+    }
+
+    &:disabled {
+      color: var(--gray-500);
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 1;
+
+    svg {
+      width: 9px;
+      height: 6px;
+
+      path {
+        stroke: var(--color-text-primary);
+        stroke-width: 1.4;
+      }
+    }
+  }
+
+  &__underline {
+    height: 1px;
+    background: var(--gray-950-opacity-32);
+  }
+
+  &__error {
+    font-size: 11px;
+    color: var(--color-text-error);
+  }
+}

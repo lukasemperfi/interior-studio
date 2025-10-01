@@ -177,8 +177,7 @@
         {% from "shared/ui/nav-menu/nav-menu.html" import nav_menu %}
         {% from "shared/ui/button/button.html" import button %}
         {% from "shared/ui/contacts-panel/contacts-panel.html" import contacts_panel %}
-        {% from "shared/ui/modal/modal.html" import modal %}
-
+        {% from "shared/ui/make-request-modal/make-request-modal.html" import makeRequestModal %}
         {% set mobileMenuItems = [
         { "href": "/", "name": "Home" },
         { "href": "#", "name": "Projects" },
@@ -197,7 +196,7 @@
                 </div>
             </div>
         </div>
-        {{ modal(class="modal_contact") }}
+        {{ makeRequestModal() }}
     </div>
 </body>
 <script src="js/home.min.js"></script>

@@ -1,0 +1,56 @@
+{% from "shared/ui/input/input.html" import input %}
+{% from "shared/ui/select/select.html" import select %}
+{% import "../../ui/icons/icons.html" as icons %}
+
+{% set property_types = [
+{'value': 'house', 'label': 'House'},
+{'value': 'apartment', 'label': 'Apartment'},
+{'value': 'commerce', 'label': 'Commerce'},
+{'value': 'architecture', 'label': 'Architecture'}
+] %}
+
+{% macro makeRequestForm() %}
+<form class="make-request-form">
+    <div class="make-request-form__item">
+        <h2 class="make-request-form__title">Make request</h2>
+        <div class="make-request-form__fields">
+            <div class="make-request-form__field">
+                {{ input(type='text', name='name', placeholder='Name') }}
+            </div>
+            <div class="make-request-form__field">
+                {{ input(type='text', name='name', placeholder='Last name') }}
+            </div>
+            <div class="make-request-form__field">
+                {{ input(type='tel', name='phone', placeholder='Phone') }}
+            </div>
+            <div class="make-request-form__field">
+                {{ input(type='email', name='email', placeholder='Email') }}
+            </div>
+            <div class="make-request-form__field">
+                {{ input(type='text', name='city', placeholder='Your city') }}
+            </div>
+            <div class="make-request-form__field">
+                {{ select(
+                name='property-type',
+                placeholder='Property type',
+                options=property_types
+                ) }}
+            </div>
+            <div class="make-request-form__field">
+                {{ input(type='text', name='comment', placeholder='Your comment') }}
+            </div>
+
+        </div>
+    </div>
+    <div class="make-request-form__item">
+        22222222222
+    </div>
+</form>
+{% endmacro %}
+
+
+
+
+<!-- <div class="make-request-form__field">
+        {{ input('text', 'name', 'Name', 'John Doe', 'Name is required') }}
+    </div> -->

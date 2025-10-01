@@ -1,0 +1,26 @@
+{% import "../icons/icons.html" as icons %}
+
+{% macro select(name, label, options, value="", error=None, placeholder="Choose an option") %}
+<div class="select">
+    {% if label %}
+    <label class="select__label" for="{{ name }}">{{ label }}</label>
+    {% endif %}
+    <div class="select__wrapper">
+        <select class="select__control{% if error %} select__control_error{% endif %}" id="{{ name }}" name="{{ name }}"
+            aria-invalid="{{ 'true' if error else 'false' }}" aria-describedby="{{ name }}-error">
+            <option value="" disabled selected>{{ placeholder }}</option>
+            {% for option in options %}
+            <option value="{{ option.value }}" {% if option.value==value %} selected{% endif %}>{{ option.label }}
+            </option>
+            {% endfor %}
+        </select>
+        <div class="select__icon">
+            {{ icons.arrowDown() }}
+        </div>
+    </div>
+    <div class="select__underline{% if error %} select__underline_error{% endif %}"></div>
+    {% if error %}
+    <div id="{{ name }}-error" class="select__error">{{ error }}</div>
+    {% endif %}
+</div>
+{% endmacro %}

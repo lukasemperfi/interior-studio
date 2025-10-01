@@ -1,0 +1,8 @@
+{% from "shared/ui/modal/modal.html" import modal %}
+{% from "shared/ui/make-request-form/make-request-form.html" import makeRequestForm %}
+
+{% macro makeRequestModal() %}
+{% call modal('make-request-modal') %}
+{{ makeRequestForm() }}
+{% endcall %}
+{% endmacro %}

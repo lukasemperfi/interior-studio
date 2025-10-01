@@ -1,0 +1,22 @@
+@use "../../../app/styles/variables" as variables;
+
+.make-request-modal {
+  .modal__content {
+    background-color: transparent;
+
+    @media (min-width: variables.$breakpoint-sm) {
+      padding-inline: 40px;
+      padding-block: 32px;
+      background-color: var(--gray-200);
+    }
+
+    @media (min-width: variables.$breakpoint-md) {
+      padding-inline: 51px;
+    }
+
+    @media (min-width: variables.$breakpoint-lg) {
+      padding-inline: 123px;
+      padding-block: 56px;
+    }
+  }
+}
