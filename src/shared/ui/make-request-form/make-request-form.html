@@ -12,7 +12,7 @@
 ] %}
 
 {% macro makeRequestForm() %}
-<form class="make-request-form">
+<form class="make-request-form" novalidate>
     <div class="make-request-form__item">
         <h2 class="make-request-form__title">Make request</h2>
         <div class="make-request-form__fields">
@@ -20,7 +20,7 @@
                 {{ input(type='text', name='name', placeholder='Name') }}
             </div>
             <div class="make-request-form__field">
-                {{ input(type='text', name='name', placeholder='Last name') }}
+                {{ input(type='text', name='last-name', placeholder='Last name') }}
             </div>
             <div class="make-request-form__field">
                 {{ input(type='tel', name='phone', placeholder='Phone') }}
@@ -48,18 +48,18 @@
         <div class="make-request-form__area area">
             <div class="area__title">Area (m2)</div>
             <div class="area__radio-group radio-group">
-                {{ radioButton(value='to-50', label='to 50') }}
-                {{ radioButton(value='50-150', label='50-150') }}
-                {{ radioButton(value='150-250', label='150-250') }}
-                {{ radioButton(value='250-400', label='250-400') }}
-                {{ radioButton(value='400-600', label='400-600') }}
-                {{ radioButton(value='600-800', label='600-800') }}
-                {{ radioButton(value='800-1000', label='800-1000') }}
-                {{ radioButton(value='1000+', label='1000+') }}
+                {{ radioButton(value='to-50', label='to 50', name='area') }}
+                {{ radioButton(value='50-150', label='50-150', name='area') }}
+                {{ radioButton(value='150-250', label='150-250', name='area') }}
+                {{ radioButton(value='250-400', label='250-400', name='area') }}
+                {{ radioButton(value='400-600', label='400-600', name='area') }}
+                {{ radioButton(value='600-800', label='600-800', name='area') }}
+                {{ radioButton(value='800-1000', label='800-1000', name='area') }}
+                {{ radioButton(value='1000+', label='1000+', name='area') }}
             </div>
             <div class="area__bottom">
                 <div class="area__file-field">
-                    {{input(type='file', name='file', placeholder='File', class='area__file-input')}}
+                    <!-- {{input(type='file', name='file', placeholder='File', class='area__file-input')}} -->
                 </div>
                 {{button("Send Request", "button--secondary button--secondary-black")}}
             </div>

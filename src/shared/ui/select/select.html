@@ -19,8 +19,6 @@
         </div>
     </div>
     <div class="select__underline{% if error %} select__underline_error{% endif %}"></div>
-    {% if error %}
-    <div id="{{ name }}-error" class="select__error">{{ error }}</div>
-    {% endif %}
+    <div class="select__error error">{{ error }}</div>
 </div>
 {% endmacro %}

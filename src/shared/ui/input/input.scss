@@ -1,7 +1,8 @@
 .input {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  // gap: 7px;
+  position: relative;
 
   &__label {
     font-size: var(--font-size-label);
@@ -16,6 +17,7 @@
     font-size: var(--font-size-body);
     color: var(--color-text-primary);
     padding: 0;
+    margin-bottom: 7px;
 
     &::placeholder {
       color: var(--gray-500);
@@ -30,5 +32,10 @@
   &__error {
     font-size: var(--font-size-caption);
     color: var(--color-text-error);
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    width: 100%;
+    text-align: left;
   }
 }

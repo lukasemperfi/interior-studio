@@ -6,9 +6,7 @@
     <input class="input__control{% if error %} input__control_error{% endif %} {{ class }}" type="{{ type }}"
         id="{{ name }}" name="{{ name }}" placeholder="{{ placeholder }}" value="{{ value }}" autocomplete="off"
         aria-invalid="{{ 'true' if error else 'false' }}" aria-describedby="{{ name }}-error">
-    <div class="input__underline{% if error %} input__underline_error{% endif %}"></div>
-    {% if error %}
-    <div id="{{ name }}-error" class="input__error">{{ error }}</div>
-    {% endif %}
+    <div class="input__underline"></div>
+    <div class="input__error error">{{ error }}</div>
 </div>
 {% endmacro %}

@@ -52,4 +52,9 @@
     color: var(--color-text-secondary);
     background-color: var(--color-background-secondary);
   }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 }
