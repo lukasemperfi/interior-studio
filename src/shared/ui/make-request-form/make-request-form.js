@@ -1,4 +1,4 @@
-export const initForm = (selector) => {
+export const initForm = (selector, onSubmit) => {
   const form = document.querySelector(selector);
   const submitBtn = form.querySelector(".button");
 
@@ -55,9 +55,9 @@ export const initForm = (selector) => {
 
   function validateField(name, value) {
     const rule = validators[name];
-    console.log("validator", validators);
-    if (!rule) return null;
-    console.log("rule", rule);
+    if (!rule) {
+      return null;
+    }
     const result = rule(value);
     return result === true ? null : result;
   }
@@ -69,8 +69,6 @@ export const initForm = (selector) => {
     if (el.name === "property-type") {
       parent = el.parentElement.parentElement;
       errorEl = parent.querySelector(".error");
-
-      console.log("parent Select", parent);
     } else {
       parent = el.parentElement;
       errorEl = parent.querySelector(".error");
@@ -103,9 +101,25 @@ export const initForm = (selector) => {
     submitBtn.disabled = hasErrors || !allFilled;
   }
 
+  function resetForm() {
+    form.reset();
+
+    Object.keys(formState).forEach((name) => (formState[name] = ""));
+    Object.keys(errors).forEach((name) => (errors[name] = null));
+
+    form.querySelectorAll(".error").forEach((el) => {
+      el.textContent = "";
+      el.classList.remove("active");
+    });
+
+    updateSubmitState();
+  }
+
   form.addEventListener("input", (e) => {
     const { name, value } = e.target;
-    if (!name) return;
+    if (!name) {
+      return;
+    }
 
     formState[name] = value;
 
@@ -139,6 +153,10 @@ export const initForm = (selector) => {
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    console.log("Submit:", formState);
+    onSubmit(formState);
   });
+
+  return {
+    resetForm,
+  };
 };

@@ -178,6 +178,7 @@
         {% from "shared/ui/button/button.html" import button %}
         {% from "shared/ui/contacts-panel/contacts-panel.html" import contacts_panel %}
         {% from "shared/ui/make-request-modal/make-request-modal.html" import makeRequestModal %}
+        {% from "shared/ui/succes-modal/succes-modal.html" import successModal %}
         {% set mobileMenuItems = [
         { "href": "/", "name": "Home" },
         { "href": "#", "name": "Projects" },
@@ -197,6 +198,7 @@
             </div>
         </div>
         {{ makeRequestModal() }}
+        {{ successModal() }}
     </div>
 </body>
 <script src="js/home.min.js"></script>

@@ -1,0 +1,16 @@
+{% from "shared/ui/modal/modal.html" import modal %}
+{% from "shared/ui/button/button.html" import button %}
+
+{% macro successModal() %}
+{% call modal('success-modal') %}
+<div class="success-modal__content">
+    <h2 class="success-modal__title">Thank you for your message!</h2>
+    <p class="success-modal__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae posuere. Ut at
+        luctus
+        ligula. Nunc ante felis, aliquam eu enim sed, ornare pretium velit.
+    </p>
+    {{ button("Send again", "button--secondary button--secondary-black") }}
+</div>
+{% endcall %}
+{% endmacro %}
