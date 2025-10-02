@@ -1,0 +1,7 @@
+{% macro radioButton(value, label) %}
+<label class="radio-button">
+    <input type="radio" class="radio-button__input" name="radio-group" value="{{ value }}">
+    <span class="radio-button__label">{{ label }}</span>
+    <span class="radio-button__checkmark"></span>
+</label>
+{% endmacro %}

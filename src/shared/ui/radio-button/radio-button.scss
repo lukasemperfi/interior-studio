@@ -1,0 +1,88 @@
+.radio-button {
+  display: inline-flex;
+  // flex-direction: column;
+  // align-items: center;
+  // gap: 11px;
+  cursor: pointer;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body);
+  color: var(--color-text-primary);
+  user-select: none;
+  min-width: 20px;
+  min-height: 20px;
+  position: relative;
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  &__label {
+    font-family: var(--font-family-primary);
+    font-weight: 500;
+    font-size: 9px;
+    letter-spacing: 0.0654em;
+    text-align: center;
+    color: rgba(58, 62, 75, 0.45);
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+
+  &__checkmark {
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-color: #f7f7f7;
+    border-radius: 50%;
+    flex-shrink: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 4px;
+      height: 4px;
+      background-color: #afb0b1;
+      border-radius: 50%;
+      box-shadow: 0 0 5px rgba(255, 255, 255, 1);
+    }
+  }
+
+  &__input:checked ~ &__label {
+    color: #3a3e4b;
+  }
+
+  &__input:checked ~ &__checkmark::after {
+    background-color: #ffffff;
+  }
+
+  &__input:checked ~ &__checkmark {
+    background-color: #000000;
+    box-shadow: 0 0px 9px -4px #000000;
+    outline: 1px solid #ffffff;
+    width: 20px;
+    height: 20px;
+  }
+
+  &_disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+
+    .radio-button__input {
+      cursor: not-allowed;
+    }
+
+    .radio-button__checkmark {
+      cursor: not-allowed;
+    }
+  }
+}

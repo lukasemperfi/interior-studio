@@ -1,6 +1,8 @@
 {% from "shared/ui/input/input.html" import input %}
 {% from "shared/ui/select/select.html" import select %}
 {% import "../../ui/icons/icons.html" as icons %}
+{% from "shared/ui/radio-button/radio-button.html" import radioButton %}
+{% from "shared/ui/button/button.html" import button %}
 
 {% set property_types = [
 {'value': 'house', 'label': 'House'},
@@ -43,7 +45,25 @@
         </div>
     </div>
     <div class="make-request-form__item">
-        22222222222
+        <div class="make-request-form__area area">
+            <div class="area__title">Area (m2)</div>
+            <div class="area__radio-group radio-group">
+                {{ radioButton(value='to-50', label='to 50') }}
+                {{ radioButton(value='50-150', label='50-150') }}
+                {{ radioButton(value='150-250', label='150-250') }}
+                {{ radioButton(value='250-400', label='250-400') }}
+                {{ radioButton(value='400-600', label='400-600') }}
+                {{ radioButton(value='600-800', label='600-800') }}
+                {{ radioButton(value='800-1000', label='800-1000') }}
+                {{ radioButton(value='1000+', label='1000+') }}
+            </div>
+            <div class="area__bottom">
+                <div class="area__file-field">
+                    {{input(type='file', name='file', placeholder='File', class='area__file-input')}}
+                </div>
+                {{button("Send Request", "button--secondary button--secondary-black")}}
+            </div>
+        </div>
     </div>
 </form>
 {% endmacro %}
@@ -51,6 +71,17 @@
 
 
 
-<!-- <div class="make-request-form__field">
-        {{ input('text', 'name', 'Name', 'John Doe', 'Name is required') }}
-    </div> -->
+<!-- <div class="area__radio-group radio-group">
+    <div class="radio-group__item">
+        {{ radioButton() }}
+        {{ radioButton() }}
+        {{ radioButton() }}
+        {{ radioButton() }}
+    </div>
+    <div class="radio-group__item">
+        {{ radioButton() }}
+        {{ radioButton() }}
+        {{ radioButton() }}
+        {{ radioButton() }}
+    </div>
+</div> -->

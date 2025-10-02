@@ -1,10 +1,10 @@
-{% macro input(type, name, label, value, error=None, placeholder="") %}
+{% macro input(type, name, label, value, error=None, placeholder="", class="") %}
 <div class="input">
     {% if label %}
     <label class="input__label" for="{{ name }}">{{ label }}</label>
     {% endif %}
-    <input class="input__control{% if error %} input__control_error{% endif %}" type="{{ type }}" id="{{ name }}"
-        name="{{ name }}" placeholder="{{ placeholder }}" value="{{ value }}" autocomplete="off"
+    <input class="input__control{% if error %} input__control_error{% endif %} {{ class }}" type="{{ type }}"
+        id="{{ name }}" name="{{ name }}" placeholder="{{ placeholder }}" value="{{ value }}" autocomplete="off"
         aria-invalid="{{ 'true' if error else 'false' }}" aria-describedby="{{ name }}-error">
     <div class="input__underline{% if error %} input__underline_error{% endif %}"></div>
     {% if error %}
