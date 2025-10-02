@@ -731,6 +731,7 @@
         
         
         
+        
         <div class="nav-menu-mobile">
             <div class="nav-menu-mobile__content">
                 <div class="nav-menu-mobile__main">
@@ -824,7 +825,7 @@
     <div class="modal__content">
         
 
-<form class="make-request-form">
+<form class="make-request-form" novalidate>
     <div class="make-request-form__item">
         <h2 class="make-request-form__title">Make request</h2>
         <div class="make-request-form__fields">
@@ -836,7 +837,7 @@
         id="name" name="name" placeholder="Name" value="" autocomplete="off"
         aria-invalid="false" aria-describedby="name-error">
     <div class="input__underline"></div>
-    
+    <div class="input__error error"></div>
 </div>
 
             </div>
@@ -845,10 +846,10 @@
 <div class="input">
     
     <input class="input__control " type="text"
-        id="name" name="name" placeholder="Last name" value="" autocomplete="off"
-        aria-invalid="false" aria-describedby="name-error">
+        id="last-name" name="last-name" placeholder="Last name" value="" autocomplete="off"
+        aria-invalid="false" aria-describedby="last-name-error">
     <div class="input__underline"></div>
-    
+    <div class="input__error error"></div>
 </div>
 
             </div>
@@ -860,7 +861,7 @@
         id="phone" name="phone" placeholder="Phone" value="" autocomplete="off"
         aria-invalid="false" aria-describedby="phone-error">
     <div class="input__underline"></div>
-    
+    <div class="input__error error"></div>
 </div>
 
             </div>
@@ -872,7 +873,7 @@
         id="email" name="email" placeholder="Email" value="" autocomplete="off"
         aria-invalid="false" aria-describedby="email-error">
     <div class="input__underline"></div>
-    
+    <div class="input__error error"></div>
 </div>
 
             </div>
@@ -884,7 +885,7 @@
         id="city" name="city" placeholder="Your city" value="" autocomplete="off"
         aria-invalid="false" aria-describedby="city-error">
     <div class="input__underline"></div>
-    
+    <div class="input__error error"></div>
 </div>
 
             </div>
@@ -919,7 +920,7 @@
         </div>
     </div>
     <div class="select__underline"></div>
-    
+    <div class="select__error error"></div>
 </div>
 
             </div>
@@ -931,7 +932,7 @@
         id="comment" name="comment" placeholder="Your comment" value="" autocomplete="off"
         aria-invalid="false" aria-describedby="comment-error">
     <div class="input__underline"></div>
-    
+    <div class="input__error error"></div>
 </div>
 
             </div>
@@ -944,56 +945,56 @@
             <div class="area__radio-group radio-group">
                 
 <label class="radio-button">
-    <input type="radio" class="radio-button__input" name="radio-group" value="to-50">
+    <input type="radio" class="radio-button__input" name="area" value="to-50">
     <span class="radio-button__label">to 50</span>
     <span class="radio-button__checkmark"></span>
 </label>
 
                 
 <label class="radio-button">
-    <input type="radio" class="radio-button__input" name="radio-group" value="50-150">
+    <input type="radio" class="radio-button__input" name="area" value="50-150">
     <span class="radio-button__label">50-150</span>
     <span class="radio-button__checkmark"></span>
 </label>
 
                 
 <label class="radio-button">
-    <input type="radio" class="radio-button__input" name="radio-group" value="150-250">
+    <input type="radio" class="radio-button__input" name="area" value="150-250">
     <span class="radio-button__label">150-250</span>
     <span class="radio-button__checkmark"></span>
 </label>
 
                 
 <label class="radio-button">
-    <input type="radio" class="radio-button__input" name="radio-group" value="250-400">
+    <input type="radio" class="radio-button__input" name="area" value="250-400">
     <span class="radio-button__label">250-400</span>
     <span class="radio-button__checkmark"></span>
 </label>
 
                 
 <label class="radio-button">
-    <input type="radio" class="radio-button__input" name="radio-group" value="400-600">
+    <input type="radio" class="radio-button__input" name="area" value="400-600">
     <span class="radio-button__label">400-600</span>
     <span class="radio-button__checkmark"></span>
 </label>
 
                 
 <label class="radio-button">
-    <input type="radio" class="radio-button__input" name="radio-group" value="600-800">
+    <input type="radio" class="radio-button__input" name="area" value="600-800">
     <span class="radio-button__label">600-800</span>
     <span class="radio-button__checkmark"></span>
 </label>
 
                 
 <label class="radio-button">
-    <input type="radio" class="radio-button__input" name="radio-group" value="800-1000">
+    <input type="radio" class="radio-button__input" name="area" value="800-1000">
     <span class="radio-button__label">800-1000</span>
     <span class="radio-button__checkmark"></span>
 </label>
 
                 
 <label class="radio-button">
-    <input type="radio" class="radio-button__input" name="radio-group" value="1000+">
+    <input type="radio" class="radio-button__input" name="area" value="1000+">
     <span class="radio-button__label">1000+</span>
     <span class="radio-button__checkmark"></span>
 </label>
@@ -1001,16 +1002,16 @@
             </div>
             <div class="area__bottom">
                 <div class="area__file-field">
-                    
+                    <!-- 
 <div class="input">
     
     <input class="input__control area__file-input" type="file"
         id="file" name="file" placeholder="File" value="" autocomplete="off"
         aria-invalid="false" aria-describedby="file-error">
     <div class="input__underline"></div>
-    
+    <div class="input__error error"></div>
 </div>
-
+ -->
                 </div>
                 
 <button class="button button--secondary button--secondary-black">
@@ -1022,6 +1023,31 @@
     </div>
 </form>
 
+
+    </div>
+    <button class="modal__close-btn">&times;</button>
+</div>
+
+
+        
+
+<div class="modal success-modal">
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+        
+<div class="success-modal__content">
+    <h2 class="success-modal__title">Thank you for your message!</h2>
+    <p class="success-modal__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae posuere. Ut at
+        luctus
+        ligula. Nunc ante felis, aliquam eu enim sed, ornare pretium velit.
+    </p>
+    
+<button class="button button--secondary button--secondary-black">
+    Send again
+</button>
+
+</div>
 
     </div>
     <button class="modal__close-btn">&times;</button>
