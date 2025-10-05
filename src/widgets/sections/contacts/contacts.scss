@@ -16,14 +16,15 @@
 
   @include respond(sm) {
     padding-top: 88px;
-    padding-bottom: 98px;
+    padding-bottom: 31px;
   }
   @include respond(md) {
     padding-top: 104px;
-    padding-bottom: 112px;
+    padding-bottom: 47px;
   }
   @include respond(lg) {
-    padding-block: 119px;
+    padding-top: 119px;
+    padding-bottom: 54px;
   }
 
   &__container {

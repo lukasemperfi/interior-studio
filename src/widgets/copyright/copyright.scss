@@ -1,0 +1,24 @@
+.copyright {
+  background-color: var(--color-background-secondary);
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--gray-500);
+  padding-block: 11px;
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 14px;
+  }
+
+  &__brand {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__brand-icon {
+    color: var(--color-text-primary);
+  }
+}
