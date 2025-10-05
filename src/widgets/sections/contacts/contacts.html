@@ -1,0 +1,50 @@
+{% from "shared/ui/button/button.html" import button %}
+<section class="contacts">
+    <div class="container contacts__container">
+        <div class="contacts__grid">
+            <div class="contacts__top">
+                <h2 class="contacts__title">Get in touch</h2>
+                <div class="contacts__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                    ullamcorper eu mauris vitae posuere. </div>
+            </div>
+            <div class="cities-info">
+                <div class="cities-info__item">
+                    <h3 class="cities-info__title">Kyiv</h3>
+                    <div class="cities-info__info">
+                        <div class="cities-info__phone">(209) 555-0104</div>
+                        <div class="cities-info__street">6391 Elgin St. Celina,</div>
+                        <div class="cities-info__state">Delaware 10299</div>
+                    </div>
+                </div>
+                <div class="cities-info__item">
+                    <h3 class="cities-info__title">Lviv</h3>
+                    <div class="cities-info__info">
+                        <div class="cities-info__phone">(209) 555-0104</div>
+                        <div class="cities-info__street">6391 Elgin St. Celina,</div>
+                        <div class="cities-info__state">Delaware 10299</div>
+                    </div>
+                </div>
+                <div class="cities-info__item">
+                    <h3 class="cities-info__title">Kharkiv</h3>
+                    <div class="cities-info__info">
+                        <div class="cities-info__phone">(209) 555-0104</div>
+                        <div class="cities-info__street">6391 Elgin St. Celina,</div>
+                        <div class="cities-info__state">Delaware 10299</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="contacts__connect">
+                <div class="contacts__email">info@gmail.com</div>
+                <div class="socials">
+                    <a href="#" class="socials__link">Fb</a>
+                    <a href="#" class="socials__link">In</a>
+                    <a href="#" class="socials__link">Be</a>
+                </div>
+            </div>
+            <div class="contacts__bottom">
+                {{button("Make request", "button button--secondary-white make-request-btn contacts__btn")}}
+            </div>
+        </div>
+    </div>
+</section>

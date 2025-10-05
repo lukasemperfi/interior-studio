@@ -1,0 +1,203 @@
+@use "../../../app/styles/_variables" as *;
+@use "../../../app/styles/mixins" as *;
+
+%connect-text {
+  font-family: var(--font-family-primary);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--color-text-secondary);
+}
+
+.contacts {
+  background-color: var(--color-background-secondary);
+  padding-block: 56px;
+  color: var(--color-text-secondary);
+
+  @include respond(sm) {
+    padding-top: 88px;
+    padding-bottom: 98px;
+  }
+  @include respond(md) {
+    padding-top: 104px;
+    padding-bottom: 112px;
+  }
+  @include respond(lg) {
+    padding-block: 119px;
+  }
+
+  &__container {
+    max-width: 520px;
+
+    @include respond(sm) {
+      padding: 0;
+    }
+    @include respond(md) {
+      max-width: 709px;
+    }
+    @include respond(lg) {
+      max-width: 1052px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    row-gap: 37px;
+
+    @include respond(sm) {
+      row-gap: 48px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-areas:
+        "top top top"
+        "cities-info cities-info cities-info"
+        "contacts__bottom contacts__bottom contacts__connect";
+    }
+    @include respond(md) {
+      row-gap: 56px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        "top top"
+        "cities-info contacts__connect"
+        "contacts__bottom contacts__bottom";
+    }
+    @include respond(lg) {
+      row-gap: 60px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 14px;
+    max-width: 315px;
+
+    @include respond(sm) {
+      grid-area: top;
+
+      max-width: 390px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--color-text-secondary);
+
+    @include respond(sm) {
+      font-size: 32px;
+    }
+
+    @include respond(lg) {
+      font-size: 36px;
+    }
+  }
+
+  &__description {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--color-text-secondary);
+  }
+
+  .cities-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 133px);
+    gap: 40px;
+
+    @include respond(500) {
+      gap: 0;
+      justify-content: space-between;
+    }
+
+    @include respond(sm) {
+      grid-area: cities-info;
+      gap: 40px;
+      justify-content: normal;
+    }
+
+    @include respond(md) {
+      grid-template-columns: repeat(3, 133px);
+    }
+
+    @include respond(lg) {
+      gap: 116px;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+
+      @include respond(md) {
+        gap: 21px;
+      }
+
+      @include respond(lg) {
+        gap: 24px;
+      }
+    }
+
+    &__title {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+      color: var(--color-text-secondary);
+    }
+
+    &__info {
+      font-weight: 300;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      color: var(--color-text-secondary);
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+  }
+
+  &__connect {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    @include respond(sm) {
+      grid-area: contacts__connect;
+    }
+
+    @include respond(md) {
+      justify-self: end;
+      align-items: flex-start;
+      gap: 21px;
+    }
+
+    @include respond(lg) {
+      gap: 24px;
+    }
+  }
+
+  &__email {
+    @extend %connect-text;
+  }
+
+  .socials {
+    display: flex;
+    gap: 17px;
+
+    &__link {
+      @extend %connect-text;
+    }
+  }
+
+  &__bottom {
+    @include respond(sm) {
+      grid-area: contacts__bottom;
+    }
+  }
+
+  &__btn {
+    padding-inline: 49px;
+  }
+}
