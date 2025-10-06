@@ -1,8 +1,8 @@
 export const initSelect = (selectClass) => {
   const select = document.querySelector(selectClass);
-  const button = select.querySelector(".border-select__button");
-  const selectedText = select.querySelector(".border-select__selected");
-  const options = select.querySelectorAll(".border-select__option");
+  const button = select.querySelector(".dropdown__button");
+  const selectedText = select.querySelector(".dropdown__selected");
+  const options = select.querySelectorAll(".dropdown__option");
   const hiddenInput = select.querySelector('input[type="hidden"]');
 
   const closeDropdown = () => {

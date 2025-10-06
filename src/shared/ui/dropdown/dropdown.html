@@ -1,0 +1,19 @@
+{% import "../icons/icons.html" as icons %}
+
+{% macro borderSelect(name, options) %}
+<div class="dropdown" data-name="{{ name }}">
+    <button type="button" class="dropdown__button" aria-haspopup="listbox" aria-expanded="false">
+        <span class="dropdown__selected">{{ options[0].label }}</span>
+        {{ icons.arrowDown(class="dropdown__icon") }}
+    </button>
+    <ul class="dropdown__dropdown" role="listbox">
+        {% for option in options %}
+        <li class="dropdown__option" role="option" data-value="{{ option.value }}">
+            {{ option.label }}
+        </li>
+        {% endfor %}
+    </ul>
+    <input type="hidden" name="{{ name }}" value="{{ options[0].value }}">
+</div>
+
+{% endmacro %}
