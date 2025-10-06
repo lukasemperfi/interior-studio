@@ -1,0 +1,70 @@
+@use "../../../../../app/styles/mixins" as mixins;
+
+.hero {
+  padding-top: 116px;
+  padding-bottom: 64px;
+
+  @include mixins.respond(sm) {
+    padding-top: 138px;
+    padding-bottom: 96px;
+  }
+
+  @include mixins.respond(md) {
+    padding-top: 162px;
+    padding-bottom: 104px;
+  }
+
+  @include mixins.respond(lg) {
+    padding-top: 208px;
+    padding-bottom: 124px;
+  }
+
+  &__container {
+    max-width: 1440px;
+    padding-inline: 24px;
+
+    @include mixins.respond(sm) {
+      padding-left: 124px;
+    }
+
+    @include mixins.respond(md) {
+      padding-left: 159px;
+    }
+
+    @include mixins.respond(lg) {
+      padding-inline: 197px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include mixins.respond(sm) {
+      gap: 32px;
+    }
+
+    @include mixins.respond(md) {
+    }
+
+    @include mixins.respond(lg) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--color-text-primary);
+
+    @include mixins.respond(sm) {
+      font-size: 32px;
+    }
+
+    @include mixins.respond(lg) {
+      font-size: 36px;
+    }
+  }
+}

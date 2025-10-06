@@ -12,7 +12,7 @@
   background-color: transparent;
   color: var(--header-text-color);
 
-  &_color_white:not(.header_scrolled) {
+  &_color_white:not(.header_scrolled):not(.header.is-open) {
     --header-text-color: var(--color-text-primary);
   }
 
@@ -100,7 +100,7 @@
     justify-content: space-between;
     margin-top: 2px;
 
-    @media (min-width: $breakpoint-lg) {
+    @media (min-width: $breakpoint-md) {
       display: none;
     }
   }
@@ -121,7 +121,7 @@
       display: block;
       width: 28px;
       height: 1px;
-      background-color: #ffffff;
+      background-color: var(--header-text-color);
       transition: transform 0.2s ease;
     }
 
@@ -157,7 +157,7 @@
   &__nav-menu {
     display: none;
 
-    @media (min-width: $breakpoint-lg) {
+    @media (min-width: $breakpoint-md) {
       display: block;
     }
   }
@@ -214,7 +214,7 @@
   transition: transform 0.3s ease-in-out;
   transform: translateX(-100%);
 
-  @media (min-width: $breakpoint-lg) {
+  @media (min-width: $breakpoint-md) {
     display: none;
   }
 

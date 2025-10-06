@@ -1,0 +1,116 @@
+@use "../../../app/styles/mixins" as mixins;
+
+.border-select {
+  --select-border-radius: 88px;
+  --select-text-color: var(--color-text-primary);
+  --select-border-color: #c4c4c4;
+  --select-bg-hover: rgb(250 250 250 / 50%);
+
+  position: relative;
+  display: inline-block;
+  color: var(--select-text-color);
+
+  @include mixins.respond(lg) {
+    background-color: var(--select-bg-hover);
+  }
+
+  &__button {
+    appearance: none;
+    background: transparent;
+    color: var(--select-text-color);
+    border: 1px solid var(--select-border-color);
+    border-radius: var(--select-border-radius);
+    font-weight: 600;
+    font-size: var(--font-size-label);
+    font-family: var(--font-family-primary);
+    padding-block: 6px;
+    padding-left: 13px;
+    padding-right: 39px;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    &[aria-expanded="true"] {
+      border-color: var(--select-text-color);
+
+      .border-select__icon {
+        transform: translateY(-50%) rotate(180deg);
+        transition: none;
+      }
+    }
+  }
+
+  &__selected {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: currentColor;
+
+    path {
+      stroke: var(--select-text-color);
+    }
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid var(--select-border-color);
+    border-radius: 8px;
+    padding: 8px 0;
+    margin: 0;
+    list-style: none;
+    overflow-y: hidden;
+    width: fit-content;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+
+    .border-select__button[aria-expanded="true"] + & {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+  &__option {
+    padding: 8px 13px;
+    font-weight: 600;
+    font-size: var(--font-size-label);
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: var(--select-bg-hover);
+    }
+
+    &[aria-selected="true"] {
+      background-color: var(--select-bg-hover);
+    }
+  }
+}

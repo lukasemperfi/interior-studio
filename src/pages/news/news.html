@@ -1,3 +1,18 @@
+{% from "widgets/header/header.html" import header %}
+{% from "pages/news/ui/sections/hero/hero.html" import hero %}
+{% from "shared/ui/nav-menu/nav-menu.html" import nav_menu %}
+{% from "shared/ui/button/button.html" import button %}
+{% from "shared/ui/contacts-panel/contacts-panel.html" import contacts_panel %}
+{% from "shared/ui/make-request-modal/make-request-modal.html" import makeRequestModal %}
+{% from "shared/ui/succes-modal/succes-modal.html" import successModal %}
+{% set mobileMenuItems = [
+{ "href": "/", "name": "Home" },
+{ "href": "#", "name": "Projects" },
+{ "href": "#", "name": "About us" },
+{ "href": "#", "name": "Blog" },
+{ "href": "#", "name": "Contacts" }
+] %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,8 +25,9 @@
 </head>
 
 <body>
-    {% from "widgets/header/header.html" import header %}
+
     {{ header("header_color_white") }}
+    {{ hero() }}
 
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi aliquam harum vero ipsam nam nesciunt porro quas,
     expedita, ab delectus sapiente aut animi exercitationem dolor libero inventore distinctio. Provident, odio.
@@ -870,18 +886,7 @@
         {% include "widgets/copyright/copyright.html" %}
     </footer>
     <div id="portal-root">
-        {% from "shared/ui/nav-menu/nav-menu.html" import nav_menu %}
-        {% from "shared/ui/button/button.html" import button %}
-        {% from "shared/ui/contacts-panel/contacts-panel.html" import contacts_panel %}
-        {% from "shared/ui/make-request-modal/make-request-modal.html" import makeRequestModal %}
-        {% from "shared/ui/succes-modal/succes-modal.html" import successModal %}
-        {% set mobileMenuItems = [
-        { "href": "/", "name": "Home" },
-        { "href": "#", "name": "Projects" },
-        { "href": "#", "name": "About us" },
-        { "href": "#", "name": "Blog" },
-        { "href": "#", "name": "Contacts" }
-        ] %}
+
         <div class="nav-menu-mobile">
             <div class="nav-menu-mobile__content">
                 <div class="nav-menu-mobile__main">

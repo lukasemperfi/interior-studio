@@ -1,6 +1,7 @@
 export function initHeader() {
   initMenuButton();
   initHeaderScroll();
+  initResizeHandler();
 }
 
 function initMenuButton() {
@@ -35,6 +36,35 @@ function initHeaderScroll() {
       header.classList.add("header_scrolled");
     } else {
       header.classList.remove("header_scrolled");
+    }
+  });
+}
+
+function initResizeHandler() {
+  const hamburger = document.querySelector(".hamburger");
+  const header = document.querySelector(".header");
+  const menuButtonText = document.querySelector(".menu-button__text");
+  const navMenuMobile = document.querySelector(".nav-menu-mobile");
+  const menuButton = document.querySelector(".header__menu-button");
+
+  if (
+    !hamburger ||
+    !header ||
+    !menuButtonText ||
+    !navMenuMobile ||
+    !menuButton
+  ) {
+    return;
+  }
+
+  window.addEventListener("resize", function () {
+    if (hamburger.classList.contains("is-open")) {
+      hamburger.classList.remove("is-open");
+      header.classList.remove("is-open");
+      menuButtonText.classList.remove("is-open");
+      navMenuMobile.classList.remove("is-open");
+      menuButton.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "auto";
     }
   });
 }
