@@ -2,7 +2,7 @@
 
 .hero {
   padding-top: 116px;
-  padding-bottom: 64px;
+  padding-bottom: 65px;
 
   @include mixins.respond(sm) {
     padding-top: 138px;
@@ -39,10 +39,10 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 17px;
 
     @include mixins.respond(sm) {
-      gap: 32px;
+      gap: 16px;
     }
 
     @include mixins.respond(md) {
@@ -51,6 +51,7 @@
     @include mixins.respond(lg) {
       flex-direction: row;
       justify-content: space-between;
+      align-items: center;
     }
   }
 
@@ -65,6 +66,33 @@
 
     @include mixins.respond(lg) {
       font-size: 36px;
+    }
+  }
+
+  &__dropdown {
+    width: fit-content;
+    @include mixins.respond(sm) {
+      display: none;
+    }
+  }
+
+  &__tabs {
+    display: none;
+
+    @include mixins.respond(sm) {
+      display: block;
+    }
+
+    .tabs__list {
+      @include mixins.respond(sm) {
+        gap: 28px;
+      }
+      @include mixins.respond(md) {
+        gap: 26px;
+      }
+      @include mixins.respond(lg) {
+        gap: 32px;
+      }
     }
   }
 }

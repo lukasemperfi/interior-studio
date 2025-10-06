@@ -1,8 +1,9 @@
-{% from "shared/ui/dropdown/border.select.html" import borderSelect %}
+{% from "shared/ui/dropdown/dropdown.html" import dropdown %}
+{% from "shared/ui/tabs/tabs.html" import tabs %}
 
 {% set filterCategories = [
-{ "value": "all", "label": "Apartments" },
-{ "value": "blogs", "label": "Blogs" },
+{ "value": "all", "label": "All" },
+{ "value": "blog", "label": "Blog" },
 { "value": "news", "label": "News" },
 { "value": "advice-from-the-designer", "label": "Advice from the designer" }
 ] %}
@@ -12,9 +13,8 @@
     <div class="hero__container">
         <div class="hero__wrapper">
             <h1 class="hero__title">Our latest news</h1>
-            <div class="hero__item">
-                {{ borderSelect("type", filterCategories) }}
-            </div>
+            {{ dropdown("type", filterCategories, "hero__dropdown") }}
+            {{tabs(filterCategories, "hero__tabs")}}
         </div>
     </div>
 </section>

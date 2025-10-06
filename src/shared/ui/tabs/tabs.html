@@ -1,0 +1,13 @@
+{% macro tabs(items, class) %}
+<div class="tabs {{ class }}">
+    <div class="tabs__list" role="tablist">
+        {% for item in items %}
+        <button class="tabs__button {% if loop.first %} tabs__button_active{% endif %}" role="tab"
+            data-tab-target="{{ item.value }}" {% if loop.first %}aria-selected="true" {% else %}aria-selected="false"
+            {% endif %}>
+            {{ item.label }}
+        </button>
+        {% endfor %}
+    </div>
+</div>
+{% endmacro %}
