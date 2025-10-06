@@ -1,3 +1,19 @@
+{% from "widgets/header/header.html" import header %}
+{% from "shared/ui/nav-menu/nav-menu.html" import nav_menu %}
+{% from "shared/ui/button/button.html" import button %}
+{% from "shared/ui/contacts-panel/contacts-panel.html" import contacts_panel %}
+{% from "shared/ui/make-request-modal/make-request-modal.html" import makeRequestModal %}
+{% from "shared/ui/succes-modal/succes-modal.html" import successModal %}
+{% set mobileMenuItems = [
+{ "href": "/", "name": "Home" },
+{ "href": "#", "name": "Projects" },
+{ "href": "#", "name": "About us" },
+{ "href": "#", "name": "Blog" },
+{ "href": "#", "name": "Contacts" }
+] %}
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +26,8 @@
 </head>
 
 <body>
-    {% include "./widgets/header/header.html" %}
+
+    {{ header() }}
 
     {% include "pages/home/ui/sections/hero/hero.html" %}
     {% include "pages/home/ui/sections/philosophy/philosophy.html" %}
@@ -21,18 +38,6 @@
         {% include "widgets/copyright/copyright.html" %}
     </footer>
     <div id="portal-root">
-        {% from "shared/ui/nav-menu/nav-menu.html" import nav_menu %}
-        {% from "shared/ui/button/button.html" import button %}
-        {% from "shared/ui/contacts-panel/contacts-panel.html" import contacts_panel %}
-        {% from "shared/ui/make-request-modal/make-request-modal.html" import makeRequestModal %}
-        {% from "shared/ui/succes-modal/succes-modal.html" import successModal %}
-        {% set mobileMenuItems = [
-        { "href": "/", "name": "Home" },
-        { "href": "#", "name": "Projects" },
-        { "href": "#", "name": "About us" },
-        { "href": "#", "name": "Blog" },
-        { "href": "#", "name": "Contacts" }
-        ] %}
         <div class="nav-menu-mobile">
             <div class="nav-menu-mobile__content">
                 <div class="nav-menu-mobile__main">

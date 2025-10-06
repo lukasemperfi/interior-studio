@@ -1,6 +1,8 @@
 @use "../../app/styles/_variables" as *;
 
 .header {
+  --header-text-color: var(--color-text-secondary);
+
   position: fixed;
   top: 0;
   left: 0;
@@ -8,13 +10,17 @@
   width: 100%;
   z-index: var(--z-index-header);
   background-color: transparent;
-  color: var(--color-text-secondary);
+  color: var(--header-text-color);
+
+  &_color_white:not(.header_scrolled) {
+    --header-text-color: var(--color-text-primary);
+  }
 
   &.is-open {
     background-color: var(--color-background-secondary);
   }
 
-  &--scrolled {
+  &_scrolled {
     background-color: var(--color-background-secondary);
   }
 
@@ -35,7 +41,7 @@
     font-size: var(--font-size-body);
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: var(--color-text-secondary);
+    color: var(--header-text-color);
     order: 1;
     margin-right: 94px;
 
@@ -69,7 +75,7 @@
     background: transparent;
     font-family: var(--font-family-primary);
     font-size: var(--font-size-label);
-    color: var(--color-text-secondary);
+    color: var(--header-text-color);
     cursor: pointer;
     line-height: 1;
     font-weight: 600;
@@ -137,7 +143,7 @@
       display: block;
       font-family: var(--font-family-primary);
       font-size: var(--font-size-label);
-      color: var(--color-text-secondary);
+      color: var(--header-text-color);
       font-weight: 600;
       letter-spacing: 0.06em;
       margin-left: 21px;
@@ -156,6 +162,10 @@
     }
   }
 
+  .nav-menu--desktop .nav-menu__link {
+    color: var(--header-text-color);
+  }
+
   &__actions {
     display: none;
 
@@ -165,9 +175,26 @@
     }
 
     .button {
+      color: var(--header-text-color);
+      border-color: var(--header-text-color);
+
       @media (min-width: $breakpoint-lg) {
         padding-block: 16px;
         padding-inline: 47px;
+      }
+    }
+  }
+
+  &_color_white {
+    .button:hover {
+      color: var(--color-text-secondary);
+      background-color: var(--color-background-secondary);
+    }
+
+    &.header_scrolled {
+      .button:hover {
+        color: var(--color-text-primary);
+        background-color: var(--color-background-primary);
       }
     }
   }
@@ -182,7 +209,7 @@
   width: 100vw;
   height: 100vh;
   background: var(--color-background-secondary);
-  color: var(--color-text-secondary);
+  color: var(--header-text-color);
   z-index: var(--z-index-header-nav-mobile);
   transition: transform 0.3s ease-in-out;
   transform: translateX(-100%);

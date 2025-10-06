@@ -10,7 +10,8 @@
 
 
 
-<header class="header">
+{% macro header(headerClass) %}
+<header class="header {{ headerClass}}">
     <div class="container">
         <div class="header__wrapper">
             <a class="header__logo" href="/">logo</a>
@@ -40,3 +41,4 @@
     </div>
     </div>
 </header>
+{% endmacro %}

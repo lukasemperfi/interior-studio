@@ -32,9 +32,9 @@ function initHeaderScroll() {
 
   window.addEventListener("scroll", function () {
     if (window.scrollY > 1) {
-      header.classList.add("header--scrolled");
+      header.classList.add("header_scrolled");
     } else {
-      header.classList.remove("header--scrolled");
+      header.classList.remove("header_scrolled");
     }
   });
 }
