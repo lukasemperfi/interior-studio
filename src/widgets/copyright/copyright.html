@@ -1,5 +1,7 @@
 {% from "../../shared/ui/icons/first-last.html" import firstLast %}
-<div class="copyright">
+
+{% macro copyright(class) %}
+<div class="copyright {{ class }}">
     <div class="container">
         <div class="copyright__wrapper">
             <div class="copyright__text">© Copyright 2018. All rights reserved</div>
@@ -10,3 +12,4 @@
         </div>
     </div>
 </div>
+{% endmacro %}

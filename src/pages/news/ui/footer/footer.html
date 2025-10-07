@@ -1,0 +1,49 @@
+{% from "widgets/copyright/copyright.html" import copyright %}
+{% from "shared/ui/picture/picture.html" import picture %}
+
+{% set images = {
+xs: "assets/images/news-page/news-footer/image-375px.jpg",
+sm: "assets/images/news-page/news-footer/image-768px.jpg",
+md: "assets/images/news-page/news-footer/image-1024px.jpg",
+lg: "assets/images/news-page/news-footer/image-1440px.jpg"
+} %}
+
+{% macro footer() %}
+<footer class="news-footer">
+    <div class="news-footer__bg-image">
+        {{ picture(images, {
+        class: "news-footer__image",
+        alt: "bg-image",
+        loading: "lazy"
+        }) }}
+    </div>
+    <div class="news-footer__content content">
+        <div class="content__container container">
+            <div class="content__grid">
+                <div class="content__col-1">
+                    <div class="content__title">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </div>
+                </div>
+                <div class="content__col-2">
+                    <div class="content__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                        ullamcorper eu mauris vitae posuere. Ut at luctus ligula. Nunc ante felis, aliquam eu enim sed,
+                        ornare pretium velit.</div>
+                    <div class="content__email-group">
+                        <input type="email" class="content__email-input" placeholder="Email">
+                        <div class="content__email-underline"></div>
+                        <button class="content__email-button" type="button" aria-label="Submit email">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 12H20M14 6L20 12L14 18" stroke="white" stroke-width="1" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{ copyright("news-footer__copyright") }}
+</footer>
+{% endmacro %}

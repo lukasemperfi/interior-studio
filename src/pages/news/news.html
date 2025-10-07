@@ -1,6 +1,7 @@
 {% from "widgets/header/header.html" import header %}
 {% from "pages/news/ui/sections/hero/hero.html" import hero %}
 {% from "pages/news/ui/sections/news/news.html" import news %}
+{% from "pages/news/ui/footer/footer.html" import footer %}
 
 {% from "shared/ui/nav-menu/nav-menu.html" import nav_menu %}
 {% from "shared/ui/button/button.html" import button %}
@@ -33,9 +34,7 @@
     {{ hero() }}
     {{ news() }}
 
-    <footer>
-        {% include "widgets/copyright/copyright.html" %}
-    </footer>
+    {{footer()}}
     <div id="portal-root">
 
         <div class="nav-menu-mobile">

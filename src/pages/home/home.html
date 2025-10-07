@@ -4,6 +4,8 @@
 {% from "shared/ui/contacts-panel/contacts-panel.html" import contacts_panel %}
 {% from "shared/ui/make-request-modal/make-request-modal.html" import makeRequestModal %}
 {% from "shared/ui/succes-modal/succes-modal.html" import successModal %}
+{% from "widgets/copyright/copyright.html" import copyright %}
+
 {% set mobileMenuItems = [
 { "href": "/", "name": "Home" },
 { "href": "#", "name": "Projects" },
@@ -35,7 +37,7 @@
     {% include "pages/home/ui/sections/lorem-ipsum/lorem-ipsum.html" %}
     <footer>
         {% include "widgets/sections/contacts/contacts.html" %}
-        {% include "widgets/copyright/copyright.html" %}
+        {{ copyright() }}
     </footer>
     <div id="portal-root">
         <div class="nav-menu-mobile">

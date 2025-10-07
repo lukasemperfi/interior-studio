@@ -1,0 +1,200 @@
+@use "../../../../app/styles/mixins" as mixins;
+
+.news-footer {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    position: relative;
+    padding-block: 78px;
+
+    @include mixins.respond(sm) {
+      padding-block: 106px;
+    }
+
+    @include mixins.respond(md) {
+      padding-block: 122px;
+    }
+
+    @include mixins.respond(lg) {
+      padding-block: 137px;
+    }
+  }
+
+  .content {
+    &__container {
+      max-width: 599px;
+
+      @include mixins.respond(md) {
+        max-width: 706px;
+        padding: 0;
+      }
+      @include mixins.respond(lg) {
+        max-width: 1044px;
+      }
+    }
+
+    &__grid {
+      display: grid;
+      gap: 21px;
+
+      @include mixins.respond(md) {
+        gap: initial;
+        grid-template-columns: 51% 49%;
+        min-height: 295px;
+      }
+
+      @include mixins.respond(lg) {
+        grid-template-columns: 50% 50%;
+        min-height: 327px;
+        justify-content: space-between;
+      }
+    }
+
+    &__col-2 {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+
+      @include mixins.respond(md) {
+        align-self: flex-end;
+        gap: 30px;
+      }
+
+      @include mixins.respond(lg) {
+        justify-self: flex-end;
+        gap: 22px;
+      }
+    }
+
+    &__title {
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 32px;
+      color: var(--color-text-secondary);
+      max-width: 298px;
+
+      @include mixins.respond(sm) {
+        font-size: 32px;
+        line-height: 39px;
+        max-width: 366px;
+      }
+      @include mixins.respond(md) {
+        max-width: none;
+      }
+
+      @include mixins.respond(lg) {
+        font-size: 36px;
+        line-height: 50px;
+      }
+    }
+
+    &__text {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 24px;
+      color: var(--color-text-secondary);
+
+      @include mixins.respond(lg) {
+        max-width: 380px;
+      }
+    }
+
+    &__email-group {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 30px;
+    }
+
+    &__email-input {
+      width: 100%;
+      //   height: 28px;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--color-text-secondary);
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 27px;
+
+      @include mixins.respond(lg) {
+        font-size: 20px;
+        line-height: 34px;
+      }
+
+      &::placeholder {
+        color: var(--color-text-secondary);
+        opacity: 1;
+      }
+    }
+
+    &__email-underline {
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--color-text-secondary);
+      opacity: 0.3;
+
+      @include mixins.respond(md) {
+        bottom: 0;
+      }
+    }
+
+    &__email-button {
+      position: absolute;
+      right: 0;
+      top: 8px;
+      width: 24px;
+      height: 24px;
+      padding: 0;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include mixins.respond(md) {
+        top: 0;
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+        path {
+          stroke: var(--color-text-secondary);
+        }
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__copyright {
+    position: relative;
+    background-color: transparent;
+  }
+}
