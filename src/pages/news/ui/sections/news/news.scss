@@ -5,6 +5,16 @@
 
   padding-bottom: 80px;
 
+  @include mixins.respond(sm) {
+    padding-bottom: 104px;
+  }
+  @include mixins.respond(md) {
+    padding-bottom: 125px;
+  }
+  @include mixins.respond(lg) {
+    padding-bottom: 140px;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: 1fr;
@@ -58,62 +68,82 @@
     }
   }
 
-  &__pagination {
-    margin-top: 48px;
-  }
-}
-
-.pagination {
-  --pagination-font-size: 11px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 26px;
-
-  &__numbers {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-  }
-
-  &__number {
-    color: var(--color-text-primary);
-    text-decoration: none;
-    transition: opacity 0.3s;
-    font-weight: 600;
-    font-size: var(--pagination-font-size);
-    letter-spacing: 0.06em;
-
-    &:hover {
-      opacity: 0.7;
-    }
-  }
-
-  &__dots {
-    color: var(--color-text-primary);
-    font-size: var(--pagination-font-size);
-    letter-spacing: 0.06em;
-  }
-
-  &__arrow {
+  .pagination {
+    --pagination-font-size: 11px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 14px;
-    height: 14px;
-    padding: 0;
-    border: none;
-    background: none;
-    cursor: pointer;
-    transition: opacity 0.3s;
+    gap: 26px;
 
-    &:hover {
-      opacity: 0.7;
+    @include mixins.respond(md) {
+      gap: 32px;
     }
 
-    svg {
+    &__numbers {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+
+      @include mixins.respond(md) {
+        gap: 21px;
+      }
+    }
+
+    &__number {
+      color: var(--color-text-primary);
+      text-decoration: none;
+      transition: opacity 0.3s;
+      font-weight: 600;
+      font-size: var(--pagination-font-size);
+      letter-spacing: 0.06em;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    &__dots {
+      color: var(--color-text-primary);
+      font-size: var(--pagination-font-size);
+      letter-spacing: 0.06em;
+    }
+
+    &__arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 14px;
       height: 14px;
+      padding: 0;
+      border: none;
+      background: none;
+      cursor: pointer;
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      svg {
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+
+  &__pagination {
+    margin-top: 48px;
+
+    @include mixins.respond(sm) {
+      margin-top: 56px;
+    }
+
+    @include mixins.respond(md) {
+      margin-top: 63px;
+    }
+
+    @include mixins.respond(lg) {
+      margin-top: 99px;
     }
   }
 }
