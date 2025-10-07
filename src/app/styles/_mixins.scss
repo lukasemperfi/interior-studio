@@ -50,11 +50,20 @@ $breakpoints: (
 
 /////////////////////////
 
-@mixin responsive-size($width, $height, $max-width, $viewport-width) {
-  width: clamp(
-    #{$width}px,
-    #{round-decimal(math.div($width * 100, $viewport-width), 3)}vw,
-    #{$max-width}px
+@mixin responsive-size(
+  $width,
+  $height,
+  $max-size,
+  $viewport-width,
+  $dimension: "width"
+) {
+  $property: if($dimension == "height", height, width);
+  $base-size: if($dimension == "height", $height, $width);
+
+  #{$property}: clamp(
+    #{$base-size}px,
+    #{round-decimal(math.div($base-size * 100, $viewport-width), 3)}vw,
+    #{$max-size}px
   );
   aspect-ratio: #{$width} / #{$height};
 }

@@ -1,10 +1,13 @@
 {% from "widgets/header/header.html" import header %}
 {% from "pages/news/ui/sections/hero/hero.html" import hero %}
+{% from "pages/news/ui/sections/news/news.html" import news %}
+
 {% from "shared/ui/nav-menu/nav-menu.html" import nav_menu %}
 {% from "shared/ui/button/button.html" import button %}
 {% from "shared/ui/contacts-panel/contacts-panel.html" import contacts_panel %}
 {% from "shared/ui/make-request-modal/make-request-modal.html" import makeRequestModal %}
 {% from "shared/ui/succes-modal/succes-modal.html" import successModal %}
+
 {% set mobileMenuItems = [
 { "href": "/", "name": "Home" },
 { "href": "#", "name": "Projects" },
@@ -28,6 +31,7 @@
 
     {{ header("header_color_white") }}
     {{ hero() }}
+    {{ news() }}
 
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi aliquam harum vero ipsam nam nesciunt porro quas,
     expedita, ab delectus sapiente aut animi exercitationem dolor libero inventore distinctio. Provident, odio.

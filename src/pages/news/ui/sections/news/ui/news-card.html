@@ -1,0 +1,14 @@
+{% from "shared/ui/picture/picture.html" import picture %}
+
+{% macro newsCard(news, attributes) %}
+<div class="news-card">
+    <a class="news-card__link" href="{{attributes.link}}">
+        {{picture(news.images, {
+        class: "news-card__image",
+        alt: "news-card",
+        loading: "lazy"
+        })}}
+        <div class="news-card__title">{{news.title}}</div>
+    </a>
+</div>
+{% endmacro %}

@@ -1,0 +1,76 @@
+{% from "pages/news/ui/sections/news/ui/news-card-split.html" import newsCardSplit %}
+{% from "pages/news/ui/sections/news/ui/news-card.html" import newsCard %}
+
+{% set newsList = [
+{
+images: {
+xs: "assets/images/news-page/news-section/image-1-375px.jpg",
+sm: "assets/images/news-page/news-section/image-1-768px.jpg",
+md: "assets/images/news-page/news-section/image-1-1024px.jpg",
+lg: "assets/images/news-page/news-section/image-1-1440px.jpg"
+
+},
+title: "5 smart tips for productive collaboration with the designer",
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel gravida urna. Donec blandit sapien eu
+diam ullamcorper euismod. Nam tempus pellentesque ligula ut aliquam.",
+link: "#"
+},
+{
+images: {
+xs: "assets/images/news-page/news-section/image-2-375px.jpg",
+sm: "assets/images/news-page/news-section/image-2-768px.jpg",
+md: "assets/images/news-page/news-section/image-2-1024px.jpg",
+lg: "assets/images/news-page/news-section/image-2-1440px.jpg"
+},
+title: "Non-standard plinth options",
+link: "#"
+},
+{
+images: {
+xs: "assets/images/news-page/news-section/image-3-375px.jpg",
+sm: "assets/images/news-page/news-section/image-3-768px.jpg",
+md: "assets/images/news-page/news-section/image-3-1024px.jpg",
+lg: "assets/images/news-page/news-section/image-3-1440px.jpg"
+},
+title: "Interior design, LCD Rybalsky",
+link: "#"
+},
+{
+images: {
+xs: "assets/images/news-page/news-section/image-1-375px.jpg",
+sm: "assets/images/news-page/news-section/image-1-768px.jpg",
+md: "assets/images/news-page/news-section/image-1-1024px.jpg",
+lg: "assets/images/news-page/news-section/image-1-1440px.jpg"
+},
+title: "5 smart tips for productive collaboration with the designer",
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel gravida urna. Donec blandit sapien eu
+diam ullamcorper euismod. Nam tempus pellentesque ligula ut aliquam.",
+link: "#"
+}
+
+] %}
+
+
+{% macro news() %}
+<section class="news">
+    <div class="container">
+        <div class="news__wrapper">
+            <div class="news__list">
+                {% for news in newsList %}
+                {% if loop.first or loop.last %}
+                {{ newsCardSplit(news.images, {
+                link: news.link,
+                alt: "news-card-split"
+                }) }}
+                {% else %}
+                {{ newsCard(news, {
+                link: news.link,
+                alt: "news-card"
+                }) }}
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endmacro %}

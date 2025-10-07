@@ -6,12 +6,12 @@
 
   @include mixins.respond(sm) {
     padding-top: 138px;
-    padding-bottom: 96px;
+    padding-bottom: 92px;
   }
 
   @include mixins.respond(md) {
     padding-top: 162px;
-    padding-bottom: 104px;
+    padding-bottom: 100px;
   }
 
   @include mixins.respond(lg) {
@@ -33,6 +33,7 @@
 
     @include mixins.respond(lg) {
       padding-inline: 197px;
+      margin: 0 auto;
     }
   }
 
