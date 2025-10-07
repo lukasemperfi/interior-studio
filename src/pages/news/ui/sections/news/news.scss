@@ -3,6 +3,8 @@
 .news {
   --list-gap: 6px;
 
+  padding-bottom: 80px;
+
   &__list {
     display: grid;
     grid-template-columns: 1fr;
@@ -53,6 +55,65 @@
           order: 2;
         }
       }
+    }
+  }
+
+  &__pagination {
+    margin-top: 48px;
+  }
+}
+
+.pagination {
+  --pagination-font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+
+  &__numbers {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  &__number {
+    color: var(--color-text-primary);
+    text-decoration: none;
+    transition: opacity 0.3s;
+    font-weight: 600;
+    font-size: var(--pagination-font-size);
+    letter-spacing: 0.06em;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__dots {
+    color: var(--color-text-primary);
+    font-size: var(--pagination-font-size);
+    letter-spacing: 0.06em;
+  }
+
+  &__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    svg {
+      width: 14px;
+      height: 14px;
     }
   }
 }
