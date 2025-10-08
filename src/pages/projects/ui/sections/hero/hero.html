@@ -1,0 +1,28 @@
+{% from "shared/ui/dropdown/dropdown.html" import dropdown %}
+{% from "shared/ui/tabs/tabs.html" import tabs %}
+
+{% set filterCategories = [
+{ "value": "house", "label": "House" },
+{ "value": "apartments", "label": "Apartments" },
+{ "value": "commerce", "label": "Commerce" },
+{ "value": "architecture", "label": "Architecture" }
+] %}
+
+{% macro hero() %}
+<section class="hero">
+    <div class="hero__container">
+        <div class="hero__wrapper">
+            <h1 class="hero__title">Our Projects</h1>
+            <div class="hero__item">
+                <div class="hero__description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae
+                    posuere. Ut
+                    at luctus ligula. Nunc ante felis, aliquam eu enim sed, ornare pretium velit.
+                </div>
+                {{ dropdown("type", filterCategories, "hero__dropdown") }}
+                {{tabs(filterCategories, "hero__tabs")}}
+            </div>
+        </div>
+    </div>
+</section>
+{% endmacro %}
