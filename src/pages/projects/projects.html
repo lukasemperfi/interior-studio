@@ -6,6 +6,7 @@
 {% from "shared/ui/succes-modal/succes-modal.html" import successModal %}
 {% from "widgets/copyright/copyright.html" import copyright %}
 {% from "pages/projects/ui/sections/hero/hero.html" import hero %}
+{% from "pages/projects/ui/sections/projects-list/projects-list.html" import projectsList %}
 
 {% set mobileMenuItems = [
 { "href": "/", "name": "Home" },
@@ -31,6 +32,7 @@
 
     {{ header("header_color_white") }}
     {{ hero() }}
+    {{ projectsList() }}
 
     <footer>
         {{ copyright() }}

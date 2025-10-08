@@ -1,0 +1,158 @@
+{% from "shared/ui/project-card/project-card.html" import projectCard %}
+{% from "shared/ui/picture/picture.html" import picture %}
+{% from "shared/ui/button/button.html" import button %}
+
+{% set projects = [
+{
+id: 1,
+title: "Residence by the lighthouse",
+images: {
+xs: "assets/images/projects-page/image-1-375px.jpg",
+sm: "assets/images/projects-page/image-1-768px.jpg",
+md: "assets/images/projects-page/image-1-1024px.jpg",
+lg: "assets/images/projects-page/image-1-1440px.jpg"
+},
+link: "https://via.placeholder.com/150",
+city: "Lodz",
+date: "16.10.2018",
+area: "80 sq.m"
+},
+{
+id: 2,
+title: "Minimalist style home",
+images: {
+xs: "assets/images/projects-page/image-2-375px.jpg",
+sm: "assets/images/projects-page/image-2-768px.jpg",
+md: "assets/images/projects-page/image-2-1024px.jpg",
+lg: "assets/images/projects-page/image-2-1440px.jpg"
+},
+link: "https://via.placeholder.com/150",
+city: "Lodz",
+date: "16.10.2018",
+area: "80 sq.m"
+},
+{
+id: 3,
+title: "Eyewear store interior",
+images: {
+xs: "assets/images/projects-page/image-3-375px.jpg",
+sm: "assets/images/projects-page/image-3-768px.jpg",
+md: "assets/images/projects-page/image-3-1024px.jpg",
+lg: "assets/images/projects-page/image-3-1440px.jpg"
+},
+link: "https://via.placeholder.com/150",
+city: "Lodz",
+date: "16.10.2018",
+area: "80 sq.m"
+},
+{
+id: 4,
+title: "House on a Hillside",
+images: {
+xs: "assets/images/projects-page/image-4-375px.jpg",
+sm: "assets/images/projects-page/image-4-768px.jpg",
+md: "assets/images/projects-page/image-4-1024px.jpg",
+lg: "assets/images/projects-page/image-4-1440px.jpg"
+},
+link: "https://via.placeholder.com/150",
+city: "Lodz",
+date: "16.10.2018",
+area: "80 sq.m"
+},
+{
+id: 5,
+title: "House on a Hillside",
+images: {
+xs: "assets/images/projects-page/image-5-375px.jpg",
+sm: "assets/images/projects-page/image-5-768px.jpg",
+md: "assets/images/projects-page/image-5-1024px.jpg",
+lg: "assets/images/projects-page/image-5-1440px.jpg"
+},
+link: "https://via.placeholder.com/150",
+city: "Lodz",
+date: "16.10.2018",
+area: "80 sq.m"
+},
+{
+id: 6,
+title: "House on a Hillside",
+images: {
+xs: "assets/images/projects-page/image-6-375px.jpg",
+sm: "assets/images/projects-page/image-6-768px.jpg",
+md: "assets/images/projects-page/image-6-1024px.jpg",
+lg: "assets/images/projects-page/image-6-1440px.jpg"
+},
+link: "https://via.placeholder.com/150",
+city: "Lodz",
+date: "16.10.2018",
+area: "80 sq.m"
+}
+] %}
+
+{% set seeMore = {
+link: "#",
+text: "See more 60 projects",
+images: {
+xs: "assets/images/projects-page/image-5-375px.jpg",
+sm: "assets/images/projects-page/image-5-768px.jpg",
+md: "assets/images/projects-page/image-5-1024px.jpg",
+lg: "assets/images/projects-page/image-5-1440px.jpg"
+}
+} %}
+
+{% set overlapingCards = [
+{
+id: 1,
+image: "assets/images/projects-page/stack-1.jpg"
+},
+{
+id: 2,
+image: "assets/images/projects-page/stack-2.jpg"
+},
+{
+id: 3,
+image: "assets/images/projects-page/stack-3.jpg"
+},
+{
+id: 4,
+image: "assets/images/projects-page/stack-4.jpg"
+},
+{
+id: 5,
+image: "assets/images/projects-page/stack-5.jpg"
+},
+{
+id: 6,
+image: "assets/images/projects-page/stack-6.jpg"
+},
+{
+id: 7,
+image: "assets/images/projects-page/stack-7.jpg"
+},
+{
+id: 8,
+image: "assets/images/projects-page/stack-8.jpg"
+},
+{
+id: 9,
+image: "assets/images/projects-page/stack-9.jpg"
+},
+{
+id: 10,
+image: "assets/images/projects-page/stack-10.jpg"
+}
+] %}
+
+{% macro projectsList() %}
+<section class="projects-list">
+    <div class="container">
+        <div class="projects-list__list list">
+            {% for project in projects %}
+            <div class="list__item">
+                {{projectCard(project)}}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endmacro %}

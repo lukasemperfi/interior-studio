@@ -1,0 +1,83 @@
+@use "../../../../../app/styles/mixins" as *;
+
+.projects-list {
+  .list {
+    display: grid;
+    gap: 6px;
+
+    @include respond(900) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond(md) {
+      grid-template-rows: repeat(4, 1fr);
+
+      grid-template-areas:
+        "item-1 item-2"
+        "item-3 item-3"
+        "item-4 item-5"
+        "item-6 item-6";
+    }
+    @include respond(lg) {
+    }
+
+    &__item {
+      aspect-ratio: 1/1;
+    }
+
+    &__item:nth-child(1) {
+      @include respond(md) {
+        grid-area: item-1;
+      }
+    }
+    &__item:nth-child(2) {
+      @include respond(md) {
+        grid-area: item-2;
+      }
+    }
+    &__item:nth-child(3) {
+      @include respond(md) {
+        grid-area: item-3;
+        aspect-ratio: 912/452;
+      }
+      @include respond(lg) {
+        aspect-ratio: 1314/653;
+      }
+
+      .bottom-block {
+        @include respond(md) {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: baseline;
+        }
+      }
+    }
+    &__item:nth-child(4) {
+      @include respond(md) {
+        grid-area: item-4;
+      }
+    }
+    &__item:nth-child(5) {
+      @include respond(md) {
+        grid-area: item-5;
+      }
+    }
+    &__item:nth-child(6) {
+      @include respond(md) {
+        grid-area: item-6;
+        aspect-ratio: 912/452;
+      }
+      @include respond(lg) {
+        aspect-ratio: 1314/653;
+      }
+
+      .bottom-block {
+        @include respond(md) {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: baseline;
+        }
+      }
+    }
+  }
+}
