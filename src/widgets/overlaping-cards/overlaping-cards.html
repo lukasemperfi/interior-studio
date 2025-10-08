@@ -1,0 +1,31 @@
+{% from "shared/ui/button/button.html" import button %}
+
+{% macro overlapingCards(overlapingCards ,class) %}
+<section class="overlaping-cards-section">
+    <div class="container">
+        <div class="overlaping-cards {{class}}">
+            <div class="overlaping-cards__item-left">
+                <div class="overlaping-cards__text-1">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+            </div>
+            <div class="overlaping-cards__item-right">
+                <div class="overlaping-cards__text-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae
+                    posuere. Ut at luctus ligula. Nunc ante felis, aliquam eu enim sed, ornare pretium velit.
+                </div>
+                {{button("Make request", "button--primary button--black make-request-btn" if class and
+                "overlaping-cards_white"
+                in class else "button--secondary button--secondary-white make-request-btn")}}
+            </div>
+
+            <div class="overlaping-cards__cards cards">
+                {% for card in overlapingCards %}
+                <img src="{{card.image}}" alt="overlaping-cards" class="cards__image">
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endmacro %}

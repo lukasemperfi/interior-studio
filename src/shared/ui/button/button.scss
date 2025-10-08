@@ -30,6 +30,11 @@
   &--black {
     color: var(--color-text-primary);
     border-color: var(--color-border-primary);
+
+    &:hover {
+      color: var(--color-text-secondary);
+      background-color: var(--color-background-secondary);
+    }
   }
 
   &--secondary {

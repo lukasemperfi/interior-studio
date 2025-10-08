@@ -1,0 +1,230 @@
+@use "../../app/styles/variables" as variables;
+
+.overlaping-cards-section {
+  padding-block: 95px;
+
+  @media (min-width: variables.$breakpoint-sm) {
+    padding-block: 123px;
+  }
+
+  @media (min-width: variables.$breakpoint-md) {
+    padding-block: 140px;
+  }
+
+  @media (min-width: variables.$breakpoint-lg) {
+    padding-top: 116px;
+    padding-bottom: 136px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .overlaping-cards {
+    --cards-height: 470px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 24px;
+    @media (min-width: variables.$breakpoint-lg) {
+      position: relative;
+      width: 1046px;
+      justify-content: flex-start;
+    }
+
+    &__item-left,
+    &__item-right {
+      @media (min-width: variables.$breakpoint-lg) {
+        position: absolute;
+        z-index: 11;
+        pointer-events: none;
+      }
+    }
+
+    &__item-left {
+      @media (min-width: variables.$breakpoint-lg) {
+        top: 68px;
+        left: 0;
+      }
+    }
+
+    &__item-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 34px;
+
+      @media (min-width: 500px) {
+        align-items: center;
+      }
+
+      @media (min-width: variables.$breakpoint-sm) {
+        gap: 49px;
+      }
+
+      @media (min-width: variables.$breakpoint-md) {
+        gap: 68px;
+      }
+
+      @media (min-width: variables.$breakpoint-lg) {
+        bottom: 36px;
+        right: 0;
+        gap: 45px;
+        align-items: flex-start;
+      }
+
+      .button {
+        padding-inline: 49px;
+        padding-block: 16px;
+        pointer-events: auto;
+      }
+    }
+
+    &__text-1 {
+      font-family: var(--font-family-primary);
+      font-weight: 700;
+      color: var(--color-text-secondary);
+      align-self: flex-start;
+      font-size: var(--font-size-h2);
+
+      @media (min-width: 500px) {
+        text-align: center;
+        max-width: 443px;
+      }
+
+      @media (min-width: variables.$breakpoint-sm) {
+        max-width: 366px;
+        line-height: 44px;
+      }
+
+      @media (min-width: variables.$breakpoint-lg) {
+        max-width: 424px;
+        line-height: 51px;
+        text-align: left;
+      }
+    }
+
+    &__text-2 {
+      font-family: var(--font-family-primary);
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 24px;
+      color: var(--color-text-secondary);
+
+      @media (min-width: 500px) {
+        text-align: center;
+        max-width: 455px;
+      }
+
+      @media (min-width: variables.$breakpoint-lg) {
+        max-width: 339px;
+        align-self: flex-end;
+        text-align: left;
+      }
+    }
+
+    .cards {
+      display: none;
+
+      @media (min-width: variables.$breakpoint-lg) {
+        height: var(--cards-height);
+        position: relative;
+        width: 738px;
+        display: block;
+
+        &__image {
+          object-fit: cover;
+          position: absolute;
+          aspect-ratio: 211/273;
+          cursor: pointer;
+          transition: transform 0.3s ease-in-out, translate 0.3s ease-in-out;
+
+          &:nth-child(1) {
+            top: 187px;
+            left: 0;
+            z-index: 1;
+            transform: rotate(-6deg);
+          }
+
+          &:nth-child(2) {
+            top: 176px;
+            left: 50px;
+            z-index: 2;
+            transform: rotate(0deg);
+          }
+
+          &:nth-child(3) {
+            top: 164px;
+            left: 104px;
+            z-index: 3;
+            transform: rotate(-6deg);
+          }
+
+          &:nth-child(4) {
+            top: 142px;
+            left: 159px;
+            z-index: 4;
+            transform: rotate(-2deg);
+          }
+
+          &:nth-child(5) {
+            top: 111px;
+            left: 225px;
+            z-index: 5;
+            transform: rotate(-11deg);
+          }
+
+          &:nth-child(6) {
+            top: 96px;
+            left: 263px;
+            z-index: 6;
+            transform: rotate(-5.5deg);
+          }
+
+          &:nth-child(7) {
+            top: 85px;
+            left: 316px;
+            z-index: 7;
+            transform: rotate(-0.5deg);
+          }
+
+          &:nth-child(8) {
+            top: 72px;
+            left: 367px;
+            z-index: 8;
+            transform: rotate(-5.5deg);
+          }
+
+          &:nth-child(9) {
+            top: 50px;
+            left: 424px;
+            z-index: 9;
+            transform: rotate(-1.5deg);
+          }
+
+          &:nth-child(10) {
+            top: 18px;
+            left: 489px;
+            z-index: 10;
+            transform: rotate(-10.5deg);
+          }
+
+          &:hover {
+            transform: rotate(0) scale(1.1);
+            z-index: 11;
+          }
+        }
+      }
+    }
+
+    &_white {
+      .overlaping-cards__text-1 {
+        color: var(--color-text-primary);
+      }
+      .overlaping-cards__text-2 {
+        color: var(--color-text-primary);
+      }
+    }
+  }
+}

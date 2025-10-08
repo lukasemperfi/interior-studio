@@ -7,6 +7,7 @@
 {% from "widgets/copyright/copyright.html" import copyright %}
 {% from "pages/projects/ui/sections/hero/hero.html" import hero %}
 {% from "pages/projects/ui/sections/projects-list/projects-list.html" import projectsList %}
+{% from "widgets/overlaping-cards/overlaping-cards.html" import overlapingCards %}
 
 {% set mobileMenuItems = [
 { "href": "/", "name": "Home" },
@@ -16,7 +17,48 @@
 { "href": "#", "name": "Contacts" }
 ] %}
 
-
+{% set overlapingCardsArray = [
+{
+id: 1,
+image: "assets/images/projects-page/stack-1.jpg"
+},
+{
+id: 2,
+image: "assets/images/projects-page/stack-2.jpg"
+},
+{
+id: 3,
+image: "assets/images/projects-page/stack-3.jpg"
+},
+{
+id: 4,
+image: "assets/images/projects-page/stack-4.jpg"
+},
+{
+id: 5,
+image: "assets/images/projects-page/stack-5.jpg"
+},
+{
+id: 6,
+image: "assets/images/projects-page/stack-6.jpg"
+},
+{
+id: 7,
+image: "assets/images/projects-page/stack-7.jpg"
+},
+{
+id: 8,
+image: "assets/images/projects-page/stack-8.jpg"
+},
+{
+id: 9,
+image: "assets/images/projects-page/stack-9.jpg"
+},
+{
+id: 10,
+image: "assets/images/projects-page/stack-10.jpg"
+}
+] %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,9 +75,10 @@
     {{ header("header_color_white") }}
     {{ hero() }}
     {{ projectsList() }}
+    {{ overlapingCards(overlapingCardsArray, "overlaping-cards_white") }}
 
     <footer>
-        {{ copyright() }}
+        {{ copyright("copyright_bg_transparent") }}
     </footer>
     <div id="portal-root">
         <div class="nav-menu-mobile">
