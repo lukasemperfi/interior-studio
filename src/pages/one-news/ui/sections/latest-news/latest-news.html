@@ -1,0 +1,51 @@
+{% set latestNewsList = [
+
+{
+image: "assets/images/one-news-page/slide-1.jpg",
+title: "Antrax IT - Italian factory for the production of radiators",
+date: "01 January 2019"
+},
+{
+image: "assets/images/one-news-page/slide-2.jpg",
+title: "Antrax IT - Italian factory for the production of radiators",
+date: "01 January 2019"
+},
+{
+image: "assets/images/one-news-page/slide-3.jpg",
+title: "Antrax IT - Italian factory for the production of radiators",
+date: "01 January 2019"
+},
+{
+image: "assets/images/one-news-page/slide-4.jpg",
+title: "Antrax IT - Italian factory for the production of radiators",
+date: "01 January 2019"
+}
+] %}
+{% macro latestNews() %}
+<section class="latest-news">
+    <div class="latest-news__container">
+        <div class="latest-news__wrapper">
+            <h2 class="latest-news__title">Our lates news</h2>
+            <div class="swiper latest-news__swiper">
+                <div class="swiper-wrapper">
+                    {% for latestNews in latestNewsList %}
+                    <div class="swiper-slide">{{ latestNewsCard(latestNews.image, latestNews.title, latestNews.date) }}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endmacro %}
+
+
+{% macro latestNewsCard(image, title, date) %}
+<div class="latest-news-card">
+    <div class="latest-news-card__image-wrapper">
+        <img class="latest-news-card__image" src="{{ image }}" alt="{{ title }}">
+    </div>
+    <div class="latest-news-card__title">{{ title }}</div>
+    <div class="latest-news-card__date">{{ date }}</div>
+</div>
+{% endmacro %}

@@ -1,7 +1,7 @@
 {% from "widgets/header/header.html" import header %}
-{% from "pages/news/ui/sections/hero/hero.html" import hero %}
-{% from "pages/news/ui/sections/news/news.html" import news %}
-{% from "pages/news/ui/footer/footer.html" import footer %}
+{% from "pages/one-news/ui/sections/article/article.html" import article %}
+{% from "pages/one-news/ui/sections/latest-news/latest-news.html" import latestNews %}
+{% from "pages/one-news/ui/footer/one-news-footer.html" import oneNewsFooter %}
 
 {% from "shared/ui/nav-menu/nav-menu.html" import nav_menu %}
 {% from "shared/ui/button/button.html" import button %}
@@ -23,17 +23,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/news.min.css">
+    <title>One News</title>
+    <link rel="stylesheet" href="css/one-news.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
 </head>
 
 <body>
 
     {{ header("header_color_white") }}
-    {{ hero() }}
-    {{ news() }}
+    {{ article() }}
+    {{ latestNews() }}
+    {{ oneNewsFooter() }}
 
-    {{footer()}}
     <div id="portal-root">
 
         <div class="nav-menu-mobile">
@@ -51,7 +52,7 @@
         {{ successModal() }}
     </div>
 </body>
-<script src="js/news.min.js"></script>
+<script src="js/one-news.min.js"></script>
 <script src="js/swiper-bundle.min.js"></script>
 
 </html>

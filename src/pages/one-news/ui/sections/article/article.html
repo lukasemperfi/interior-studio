@@ -1,0 +1,331 @@
+{% from "shared/ui/picture/picture.html" import picture %}
+
+{% set images = {
+xs: "assets/images/one-news-page/image-1-375px.jpg",
+sm: "assets/images/one-news-page/image-1-768px.jpg",
+md: "assets/images/one-news-page/image-1-1024px.jpg",
+lg: "assets/images/one-news-page/image-1-1440px.jpg"
+} %}
+
+{% set galleryImages = [
+{
+xs: "assets/images/one-news-page/image-2-375px.jpg",
+sm: "assets/images/one-news-page/image-2-768px.jpg",
+md: "assets/images/one-news-page/image-2-1024px.jpg",
+lg: "assets/images/one-news-page/image-2-1440px.jpg"
+},
+{
+xs: "assets/images/one-news-page/image-3-375px.jpg",
+sm: "assets/images/one-news-page/image-3-768px.jpg",
+md: "assets/images/one-news-page/image-3-1024px.jpg",
+lg: "assets/images/one-news-page/image-3-1440px.jpg"
+},
+{
+xs: "assets/images/one-news-page/image-4-375px.jpg",
+sm: "assets/images/one-news-page/image-4-768px.jpg",
+md: "assets/images/one-news-page/image-4-1024px.jpg",
+lg: "assets/images/one-news-page/image-4-1440px.jpg"
+}
+] %}
+
+
+{% macro article() %}
+<section class="article">
+    <div class="article__text-block container">
+        <div class="article__block">
+            <h1 class="article__h1">
+                Antrax IT - Italian factory for the production
+            </h1>
+            <p class="article__paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel gravida urna. Donec blandit sapien eu
+                diam ullamcorper euismod. Nam tempus pellentesque ligula ut aliquam. Donec et ipsum nec quam posuere
+                maximus eu in erat. Duis laoreet finibus consectetur. Nullam pulvinar ex sit amet leo gravida, sed
+                mattis enim vehicula. Duis purus nisl, consectetur ut est non, placerat eleifend turpis. Duis auctor
+                suscipit arcu. Aenean leo est, rutrum a eleifend eget, tempor nec urna. Proin finibus lobortis arcu
+                dictum convallis. Ut fermentum eu magna vel laoreet. In lacus augue, malesuada id elit sit amet, varius
+                imperdiet ex. Nullam blandit lobortis posuere. </p>
+        </div>
+        <div class="share article__share">
+            <div class="share__title">Share:</div>
+            <div class="share__socials ">
+                <a href="#" class="share__social">
+                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="24.7742" height="24" rx="12" fill="#3F5C95" />
+                        <path
+                            d="M14.7096 7.80587V9.15341H13.8712C13.2062 9.15341 13.0809 9.45593 13.0809 9.88677V10.8585H14.6614L14.4494 12.371H13.0809V16.2578H11.4329V12.371H10.0645V10.8585H11.4329V9.7401C11.4329 8.44756 12.2714 7.7417 13.4857 7.7417C14.0639 7.7417 14.5651 7.77837 14.7096 7.80587Z"
+                            fill="white" />
+                    </svg>
+                </a>
+                <a href="#" class="share__social">
+                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.774414" width="24" height="24" rx="12" fill="#38A7DE" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M7.74219 15.2918C8.65605 15.9023 9.741 16.2578 10.9075 16.2578C14.7058 16.2578 16.7826 12.9812 16.7826 10.1401C16.7826 10.0469 16.7806 9.95483 16.7766 9.86275C17.1802 9.55936 17.5304 9.18093 17.8067 8.7498C17.4368 8.92118 17.0388 9.03615 16.6211 9.08725C17.0473 8.82272 17.3739 8.4001 17.5289 7.89872C17.1299 8.14462 16.6875 8.32346 16.2175 8.4198C15.8411 8.00251 15.3042 7.7417 14.7104 7.7417C13.57 7.7417 12.6451 8.70349 12.6451 9.89042C12.6451 10.0597 12.6637 10.2231 12.699 10.3806C10.983 10.2912 9.4607 9.43534 8.44318 8.13451C8.26554 8.4528 8.16339 8.82112 8.16339 9.21552C8.16339 9.96122 8.52772 10.6196 9.08177 11.005C8.7431 10.9949 8.42506 10.8975 8.14628 10.7362C8.14628 10.7452 8.14628 10.7543 8.14628 10.7633C8.14628 11.8044 8.85885 12.6741 9.80239 12.8716C9.62979 12.9211 9.44712 12.9467 9.25891 12.9467C9.12556 12.9467 8.99623 12.9339 8.87042 12.9083C9.1326 13.7631 9.89549 14.3848 10.7988 14.4013C10.0923 14.9783 9.20305 15.3211 8.23485 15.3211C8.06828 15.3211 7.90423 15.3125 7.74219 15.2918Z"
+                            fill="white" />
+                    </svg>
+
+                </a>
+                <a href="#" class="share__social">
+                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12.7744" cy="12" r="12" fill="#0077B7" />
+                        <g clip-path="url(#clip0_17412_5430)">
+                            <path
+                                d="M18.5784 17.0349V17.0344H18.5811V13.0593C18.5811 11.1147 18.1625 9.6167 15.8891 9.6167C14.7962 9.6167 14.0628 10.2164 13.7633 10.785H13.7317V9.79825H11.5762V17.0344H13.8207V13.4513C13.8207 12.5079 13.9995 11.5957 15.1678 11.5957C16.319 11.5957 16.3362 12.6723 16.3362 13.5119V17.0349H18.5784Z"
+                                fill="white" />
+                            <path d="M7.92188 9.79834H10.1691V17.0345H7.92188V9.79834Z" fill="white" />
+                            <path
+                                d="M9.04471 6.19336C8.3262 6.19336 7.74316 6.77639 7.74316 7.49491C7.74316 8.21342 8.3262 8.80865 9.04471 8.80865C9.76323 8.80865 10.3463 8.21342 10.3463 7.49491C10.3458 6.77639 9.76278 6.19336 9.04471 6.19336V6.19336Z"
+                                fill="white" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_17412_5430">
+                                <rect width="10.8387" height="10.8387" fill="white"
+                                    transform="translate(7.74316 6.19336)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+                <a href="#" class="share__social">
+                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle opacity="0.2" cx="12.7744" cy="12" r="11.5" stroke="#080808" />
+                        <g clip-path="url(#clip0_17412_5436)">
+                            <path
+                                d="M12.3854 9.29035L13.1596 8.51616C14.0148 7.66101 15.4012 7.66101 16.2564 8.51616C17.1115 9.37131 17.1115 10.7578 16.2564 11.6129L15.4822 12.3871M13.9338 13.9355L12.3854 15.4839C11.5303 16.3391 10.1438 16.3391 9.28865 15.4839C8.4335 14.6288 8.4335 13.2423 9.28865 12.3871L10.837 10.8387"
+                                stroke="#080808" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M10.835 13.9349L14.7059 10.064" stroke="#080808" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_17412_5436">
+                                <rect width="10.0645" height="10.0645" fill="white"
+                                    transform="translate(7.74219 6.96777)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="article__image-block container">
+        <div class="article__img-wrapper">
+            {{picture(images, {
+            class: "article__img",
+            alt: "article",
+            loading: "lazy"
+            })}}
+        </div>
+
+    </div>
+    <div class="article__text-block container">
+        <h2 class="article__h2">Donec et ipsum nec quam posuere maximus eu in erat. Duis
+            laoreet finibus consectetur. </h2>
+        <p class="article__paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel gravida urna. Donec blandit sapien eu
+            diam
+            ullamcorper euismod. Nam tempus pellentesque ligula ut aliquam. Donec et ipsum nec quam posuere maximus
+            eu
+            in erat. Duis laoreet finibus consectetur. Nullam pulvinar ex sit amet leo gravida, sed mattis enim
+            vehicula. Duis purus nisl, consectetur ut est non, placerat eleifend turpis. Duis auctor suscipit arcu.
+            Aenean leo est, rutrum a eleifend eget, tempor nec urna. Proin finibus lobortis arcu dictum convallis.
+            Ut
+            fermentum eu magna vel laoreet. In lacus augue, malesuada id elit sit amet, varius imperdiet ex. Nullam
+            blandit lobortis posuere.
+        </p>
+        <ol class="article__list numbered-list">
+            <li class="numbered-list__item">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            <li class="numbered-list__item">Cras vel gravida urna. Donec blandit sapien eu diam ullamcorper euismod
+            </li>
+            <li class="numbered-list__item">Nam tempus pellentesque ligula ut aliquam.</li>
+            <li class="numbered-list__item">Donec et ipsum nec quam posuere maximus eu in erat.</li>
+            <li class="numbered-list__item">Duis laoreet finibus consectetur.</li>
+        </ol>
+        <p class="article__paragraph">Ut arcu tortor, hendrerit eget sollicitudin sed, tincidunt a lectus. Cras
+            gravida
+            ultricies ante sit amet consectetur. Maecenas sed arcu tempor, posuere odio pharetra, faucibus risus.
+            Etiam
+            fermentum felis quis aliquet viverra. Mauris in odio nec mi pellentesque placerat. Praesent at metus in
+            lacus posuere molestie. Aliquam consequat, neque eget congue feugiat, lectus leo condimentum lorem,
+            scelerisque euismod nisi ipsum nec metus. Mauris semper felis venenatis eros interdum sollicitudin.
+        </p>
+    </div>
+    <div class="article__image-block container">
+
+        <div class="article__gallery gallery">
+            <div class="gallery__item">
+                {{picture(galleryImages[0], {
+                class: "gallery__img",
+                alt: "article",
+                loading: "lazy"
+                })}}
+            </div>
+            <div class="gallery__item">
+                {{picture(galleryImages[1], {
+                class: "gallery__img",
+                alt: "article",
+                loading: "lazy"
+                })}}
+            </div>
+            <div class="gallery__item">
+                {{picture(galleryImages[2], {
+                class: "gallery__img",
+                alt: "article",
+                loading: "lazy"
+                })}}
+            </div>
+        </div>
+    </div>
+    <div class="article__text-block article__text-block_3 container">
+        <h2 class="article__h2">Duis laoreet finibus consectetur.</h2>
+        <p class="article__paragraph">
+            Duis laoreet finibus consectetur. Nullam pulvinar ex sit amet leo gravida, sed mattis enim vehicula.
+            Duis
+            purus nisl, consectetur ut est non, placerat eleifend turpis. Duis auctor suscipit arcu. Aenean leo est,
+            rutrum a eleifend eget, tempor nec urna. Proin finibus lobortis arcu dictum convallis. Ut fermentum eu
+            magna
+            vel laoreet. In lacus augue, malesuada id elit sit amet, varius imperdiet ex. Nullam blandit lobortis
+            posuere:
+        </p>
+        <ul class="article__list thesis-list">
+            <li class="thesis-list__item">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            <li class="thesis-list__item">Cras vel gravida urna. Donec blandit sapien eu diam ullamcorper euismod.
+            </li>
+            <li class="thesis-list__item">Nam tempus pellentesque ligula ut aliquam.</li>
+            <li class="thesis-list__item">Donec et ipsum nec quam posuere maximus eu in erat.</li>
+        </ul>
+        <p class="article__paragraph">
+            Mauris eget ornare est. Morbi metus justo, posuere vel semper semper, eleifend ut purus. Morbi cursus
+            consequat nibh, a feugiat felis tempor vitae. Interdum et malesuada fames ac ante ipsum primis in
+            faucibus.
+            Nam sodales orci nisl, in lacinia risus rhoncus a.
+        </p>
+        <div class="share">
+            <div class="share__title">Share:</div>
+            <div class="share__socials ">
+                <a href="#" class="share__social">
+                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="24.7742" height="24" rx="12" fill="#3F5C95" />
+                        <path
+                            d="M14.7096 7.80587V9.15341H13.8712C13.2062 9.15341 13.0809 9.45593 13.0809 9.88677V10.8585H14.6614L14.4494 12.371H13.0809V16.2578H11.4329V12.371H10.0645V10.8585H11.4329V9.7401C11.4329 8.44756 12.2714 7.7417 13.4857 7.7417C14.0639 7.7417 14.5651 7.77837 14.7096 7.80587Z"
+                            fill="white" />
+                    </svg>
+                </a>
+                <a href="#" class="share__social">
+                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.774414" width="24" height="24" rx="12" fill="#38A7DE" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M7.74219 15.2918C8.65605 15.9023 9.741 16.2578 10.9075 16.2578C14.7058 16.2578 16.7826 12.9812 16.7826 10.1401C16.7826 10.0469 16.7806 9.95483 16.7766 9.86275C17.1802 9.55936 17.5304 9.18093 17.8067 8.7498C17.4368 8.92118 17.0388 9.03615 16.6211 9.08725C17.0473 8.82272 17.3739 8.4001 17.5289 7.89872C17.1299 8.14462 16.6875 8.32346 16.2175 8.4198C15.8411 8.00251 15.3042 7.7417 14.7104 7.7417C13.57 7.7417 12.6451 8.70349 12.6451 9.89042C12.6451 10.0597 12.6637 10.2231 12.699 10.3806C10.983 10.2912 9.4607 9.43534 8.44318 8.13451C8.26554 8.4528 8.16339 8.82112 8.16339 9.21552C8.16339 9.96122 8.52772 10.6196 9.08177 11.005C8.7431 10.9949 8.42506 10.8975 8.14628 10.7362C8.14628 10.7452 8.14628 10.7543 8.14628 10.7633C8.14628 11.8044 8.85885 12.6741 9.80239 12.8716C9.62979 12.9211 9.44712 12.9467 9.25891 12.9467C9.12556 12.9467 8.99623 12.9339 8.87042 12.9083C9.1326 13.7631 9.89549 14.3848 10.7988 14.4013C10.0923 14.9783 9.20305 15.3211 8.23485 15.3211C8.06828 15.3211 7.90423 15.3125 7.74219 15.2918Z"
+                            fill="white" />
+                    </svg>
+
+                </a>
+                <a href="#" class="share__social">
+                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12.7744" cy="12" r="12" fill="#0077B7" />
+                        <g clip-path="url(#clip0_17412_5430)">
+                            <path
+                                d="M18.5784 17.0349V17.0344H18.5811V13.0593C18.5811 11.1147 18.1625 9.6167 15.8891 9.6167C14.7962 9.6167 14.0628 10.2164 13.7633 10.785H13.7317V9.79825H11.5762V17.0344H13.8207V13.4513C13.8207 12.5079 13.9995 11.5957 15.1678 11.5957C16.319 11.5957 16.3362 12.6723 16.3362 13.5119V17.0349H18.5784Z"
+                                fill="white" />
+                            <path d="M7.92188 9.79834H10.1691V17.0345H7.92188V9.79834Z" fill="white" />
+                            <path
+                                d="M9.04471 6.19336C8.3262 6.19336 7.74316 6.77639 7.74316 7.49491C7.74316 8.21342 8.3262 8.80865 9.04471 8.80865C9.76323 8.80865 10.3463 8.21342 10.3463 7.49491C10.3458 6.77639 9.76278 6.19336 9.04471 6.19336V6.19336Z"
+                                fill="white" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_17412_5430">
+                                <rect width="10.8387" height="10.8387" fill="white"
+                                    transform="translate(7.74316 6.19336)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+                <a href="#" class="share__social">
+                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle opacity="0.2" cx="12.7744" cy="12" r="11.5" stroke="#080808" />
+                        <g clip-path="url(#clip0_17412_5436)">
+                            <path
+                                d="M12.3854 9.29035L13.1596 8.51616C14.0148 7.66101 15.4012 7.66101 16.2564 8.51616C17.1115 9.37131 17.1115 10.7578 16.2564 11.6129L15.4822 12.3871M13.9338 13.9355L12.3854 15.4839C11.5303 16.3391 10.1438 16.3391 9.28865 15.4839C8.4335 14.6288 8.4335 13.2423 9.28865 12.3871L10.837 10.8387"
+                                stroke="#080808" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M10.835 13.9349L14.7059 10.064" stroke="#080808" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_17412_5436">
+                                <rect width="10.0645" height="10.0645" fill="white"
+                                    transform="translate(7.74219 6.96777)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </a>
+            </div>
+        </div>
+        <div class="seperator"></div>
+    </div>
+
+</section>
+{% endmacro %}
+
+
+
+<!-- <div class="share">
+    <div class="share__title">Share:</div>
+    <div class="share__socials">
+        <a href="#" class="share__social">
+            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="24.7742" height="24" rx="12" fill="#3F5C95" />
+                <path
+                    d="M14.7096 7.80587V9.15341H13.8712C13.2062 9.15341 13.0809 9.45593 13.0809 9.88677V10.8585H14.6614L14.4494 12.371H13.0809V16.2578H11.4329V12.371H10.0645V10.8585H11.4329V9.7401C11.4329 8.44756 12.2714 7.7417 13.4857 7.7417C14.0639 7.7417 14.5651 7.77837 14.7096 7.80587Z"
+                    fill="white" />
+            </svg>
+        </a>
+        <a href="#" class="share__social">
+            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.774414" width="24" height="24" rx="12" fill="#38A7DE" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.74219 15.2918C8.65605 15.9023 9.741 16.2578 10.9075 16.2578C14.7058 16.2578 16.7826 12.9812 16.7826 10.1401C16.7826 10.0469 16.7806 9.95483 16.7766 9.86275C17.1802 9.55936 17.5304 9.18093 17.8067 8.7498C17.4368 8.92118 17.0388 9.03615 16.6211 9.08725C17.0473 8.82272 17.3739 8.4001 17.5289 7.89872C17.1299 8.14462 16.6875 8.32346 16.2175 8.4198C15.8411 8.00251 15.3042 7.7417 14.7104 7.7417C13.57 7.7417 12.6451 8.70349 12.6451 9.89042C12.6451 10.0597 12.6637 10.2231 12.699 10.3806C10.983 10.2912 9.4607 9.43534 8.44318 8.13451C8.26554 8.4528 8.16339 8.82112 8.16339 9.21552C8.16339 9.96122 8.52772 10.6196 9.08177 11.005C8.7431 10.9949 8.42506 10.8975 8.14628 10.7362C8.14628 10.7452 8.14628 10.7543 8.14628 10.7633C8.14628 11.8044 8.85885 12.6741 9.80239 12.8716C9.62979 12.9211 9.44712 12.9467 9.25891 12.9467C9.12556 12.9467 8.99623 12.9339 8.87042 12.9083C9.1326 13.7631 9.89549 14.3848 10.7988 14.4013C10.0923 14.9783 9.20305 15.3211 8.23485 15.3211C8.06828 15.3211 7.90423 15.3125 7.74219 15.2918Z"
+                    fill="white" />
+            </svg>
+
+        </a>
+        <a href="#" class="share__social">
+            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12.7744" cy="12" r="12" fill="#0077B7" />
+                <g clip-path="url(#clip0_17412_5430)">
+                    <path
+                        d="M18.5784 17.0349V17.0344H18.5811V13.0593C18.5811 11.1147 18.1625 9.6167 15.8891 9.6167C14.7962 9.6167 14.0628 10.2164 13.7633 10.785H13.7317V9.79825H11.5762V17.0344H13.8207V13.4513C13.8207 12.5079 13.9995 11.5957 15.1678 11.5957C16.319 11.5957 16.3362 12.6723 16.3362 13.5119V17.0349H18.5784Z"
+                        fill="white" />
+                    <path d="M7.92188 9.79834H10.1691V17.0345H7.92188V9.79834Z" fill="white" />
+                    <path
+                        d="M9.04471 6.19336C8.3262 6.19336 7.74316 6.77639 7.74316 7.49491C7.74316 8.21342 8.3262 8.80865 9.04471 8.80865C9.76323 8.80865 10.3463 8.21342 10.3463 7.49491C10.3458 6.77639 9.76278 6.19336 9.04471 6.19336V6.19336Z"
+                        fill="white" />
+                </g>
+                <defs>
+                    <clipPath id="clip0_17412_5430">
+                        <rect width="10.8387" height="10.8387" fill="white"
+                            transform="translate(7.74316 6.19336)" />
+                    </clipPath>
+                </defs>
+            </svg>
+        </a>
+        <a href="#" class="share__social">
+            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle opacity="0.2" cx="12.7744" cy="12" r="11.5" stroke="#080808" />
+                <g clip-path="url(#clip0_17412_5436)">
+                    <path
+                        d="M12.3854 9.29035L13.1596 8.51616C14.0148 7.66101 15.4012 7.66101 16.2564 8.51616C17.1115 9.37131 17.1115 10.7578 16.2564 11.6129L15.4822 12.3871M13.9338 13.9355L12.3854 15.4839C11.5303 16.3391 10.1438 16.3391 9.28865 15.4839C8.4335 14.6288 8.4335 13.2423 9.28865 12.3871L10.837 10.8387"
+                        stroke="#080808" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M10.835 13.9349L14.7059 10.064" stroke="#080808" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </g>
+                <defs>
+                    <clipPath id="clip0_17412_5436">
+                        <rect width="10.0645" height="10.0645" fill="white"
+                            transform="translate(7.74219 6.96777)" />
+                    </clipPath>
+                </defs>
+            </svg>
+
+        </a>
+    </div>
+</div> -->

@@ -19,6 +19,7 @@ export const js = () => {
         entry: {
           home: "./src/pages/home/home.js",
           news: "./src/pages/news/news.js",
+          "one-news": "./src/pages/one-news/one-news.js",
         },
         output: {
           filename: "[name].min.js",

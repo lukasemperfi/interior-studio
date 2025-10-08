@@ -1,0 +1,87 @@
+@use "../../../../../app/styles/mixins" as mixins;
+.latest-news {
+  padding-bottom: 80px;
+  &__container {
+    padding-left: clamp(24px, 6.4vw, 124px);
+
+    @include mixins.respond(sm) {
+      padding-left: clamp(124px, 16.14vw, 159px);
+    }
+
+    @include mixins.respond(md) {
+      padding-left: clamp(159px, 15.5vw, 202px);
+    }
+
+    @include mixins.respond(lg) {
+      padding-left: 14.028vw;
+    }
+  }
+  &__swiper {
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--color-text-primary);
+    margin-bottom: 40px;
+
+    @include mixins.respond(sm) {
+      font-size: 32px;
+      margin-bottom: 56px;
+    }
+    @include mixins.respond(md) {
+      margin-bottom: 64px;
+    }
+
+    @include mixins.respond(lg) {
+      font-size: 36px;
+      margin-bottom: 72px;
+    }
+  }
+
+  .swiper-slide {
+    aspect-ratio: 290/448;
+
+    @include mixins.respond(sm) {
+      aspect-ratio: 366/536;
+    }
+    @include mixins.respond(md) {
+      aspect-ratio: 293/447;
+    }
+
+    @include mixins.respond(lg) {
+      aspect-ratio: 316/475;
+    }
+  }
+}
+
+.latest-news-card {
+  width: 100%;
+  height: 100%;
+
+  &__image-wrapper {
+    aspect-ratio: 290/357;
+    margin-bottom: 24px;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    margin-bottom: 13px;
+    font-weight: 700;
+    font-size: 14px;
+
+    line-height: 19px;
+    color: var(--color-text-primary);
+  }
+  &__date {
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 17px;
+    color: #828282;
+  }
+}
