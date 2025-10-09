@@ -1,0 +1,23 @@
+@use "../../app/styles/index" as *;
+@use "../../widgets/header/header.scss" as *;
+@use "../../shared/ui/button/button.scss" as *;
+@use "../../shared/ui/nav-menu/nav-menu.scss" as *;
+@use "../../shared/ui/contacts-panel/contacts-panel.scss" as *;
+@use "../../shared/ui/modal/modal.scss" as *;
+@use "../../shared/ui/input/input.scss" as *;
+@use "../../shared/ui/make-request-modal/make-request-modal.scss" as *;
+@use "../../shared/ui/make-request-form/make-request-form.scss" as *;
+@use "../../shared/ui/radio-button/radio-button.scss" as *;
+@use "../../shared/ui/succes-modal/succes-modal.scss" as *;
+@use "../../widgets/sections/contacts/contacts.scss" as *;
+@use "../../widgets/copyright/copyright.scss" as *;
+@use "../../pages/not-found/ui/not-found.scss" as *;
+@use "../../shared/ui/decorative-link/decorative-link.scss" as *;
+
+.not-found-page__wrapper {
+  background-color: black;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr max-content;
+  height: 100vh;
+}
