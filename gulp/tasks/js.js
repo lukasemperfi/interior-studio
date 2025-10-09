@@ -24,6 +24,7 @@ export const js = () => {
           "one-project": "./src/pages/one-project/one-project.js",
           contacts: "./src/pages/contacts/contacts.js",
           404: "./src/pages/404/404.js",
+          "about-us": "./src/pages/about-us/about-us.js",
         },
         output: {
           filename: "[name].min.js",

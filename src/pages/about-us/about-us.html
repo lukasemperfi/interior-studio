@@ -1,0 +1,53 @@
+{% from "widgets/header/header.html" import header %}
+{% from "shared/ui/nav-menu/nav-menu.html" import nav_menu %}
+{% from "shared/ui/button/button.html" import button %}
+{% from "shared/ui/contacts-panel/contacts-panel.html" import contacts_panel %}
+{% from "shared/ui/make-request-modal/make-request-modal.html" import makeRequestModal %}
+{% from "shared/ui/succes-modal/succes-modal.html" import successModal %}
+{% from "pages/about-us/ui/sections/hero/hero.html" import hero %}
+
+{% set mobileMenuItems = [
+{ "href": "/interior-studio/", "name": "Home" },
+{ "href": "/interior-studio/projects.html", "name": "Projects" },
+{ "href": "/interior-studio/about-us.html", "name": "About us" },
+{ "href": "/interior-studio/news.html", "name": "Blog" },
+{ "href": "/interior-studio/contacts.html", "name": "Contacts" }
+] %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/about-us.min.css">
+</head>
+
+<body>
+
+    {{ header("header_color_white") }}
+    {{ hero() }}
+
+
+    <div id="portal-root">
+        <div class="nav-menu-mobile">
+            <div class="nav-menu-mobile__content">
+                <div class="nav-menu-mobile__main">
+                    {{ nav_menu(mobileMenuItems, "nav-menu--mobile") }}
+                    {{ button("Send Request", "button--primary button--white make-request-btn") }}
+                </div>
+                <div class="nav-menu-mobile__footer">
+                    {{ contacts_panel() }}
+                </div>
+            </div>
+        </div>
+        {{ makeRequestModal() }}
+        {{ successModal() }}
+    </div>
+</body>
+<script src="js/about-us.min.js"></script>
+
+</html>
