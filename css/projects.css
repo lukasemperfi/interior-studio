@@ -144,6 +144,10 @@ body {
   padding-block: 0;
 }
 
+.hidden {
+  display: none !important;
+}
+
 :root {
   /* Constants */
   /* Font Sizes */

@@ -144,6 +144,10 @@ body {
   padding-block: 0;
 }
 
+.hidden {
+  display: none !important;
+}
+
 :root {
   /* Constants */
   /* Font Sizes */
@@ -1822,8 +1826,8 @@ body {
 .article .seperator {
   height: 1px;
   background: #828282;
-  background: red;
   width: 100%;
+  opacity: 0.16;
   margin-top: 63px;
   margin-bottom: 84px;
 }
