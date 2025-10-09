@@ -5,14 +5,14 @@
 {% from "shared/ui/make-request-modal/make-request-modal.html" import makeRequestModal %}
 {% from "shared/ui/succes-modal/succes-modal.html" import successModal %}
 {% from "widgets/copyright/copyright.html" import copyright %}
-{% from "pages/not-found/ui/not-found.html" import notFound %}
+{% from "pages/404/ui/not-found.html" import notFound %}
 
 {% set mobileMenuItems = [
-{ "href": "/", "name": "Home" },
-{ "href": "#", "name": "Projects" },
-{ "href": "#", "name": "About us" },
-{ "href": "#", "name": "Blog" },
-{ "href": "#", "name": "Contacts" }
+{ "href": "/interior-studio/", "name": "Home" },
+{ "href": "/interior-studio/projects.html", "name": "Projects" },
+{ "href": "/interior-studio/about-us.html", "name": "About us" },
+{ "href": "/interior-studio/news.html", "name": "Blog" },
+{ "href": "/interior-studio/contacts.html", "name": "Contacts" }
 ] %}
 
 
@@ -24,7 +24,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/not-found.min.css">
+    <link rel="stylesheet" href="css/404.min.css">
 </head>
 
 <body>
@@ -54,6 +54,6 @@
         {{ successModal() }}
     </div>
 </body>
-<script src="js/not-found.min.js"></script>
+<script src="js/404.min.js"></script>
 
 </html>

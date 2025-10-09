@@ -23,7 +23,7 @@ export const js = () => {
           projects: "./src/pages/projects/projects.js",
           "one-project": "./src/pages/one-project/one-project.js",
           contacts: "./src/pages/contacts/contacts.js",
-          "not-found": "./src/pages/not-found/not-found.js",
+          404: "./src/pages/404/404.js",
         },
         output: {
           filename: "[name].min.js",
