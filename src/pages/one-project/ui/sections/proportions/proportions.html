@@ -1,0 +1,25 @@
+{% from "shared/ui/picture/picture.html" import picture %}
+
+{% set images = {
+xs: "assets/images/one-project-page/image-5-375px.jpg",
+sm: "assets/images/one-project-page/image-5-768px.jpg",
+md: "assets/images/one-project-page/image-5-1024px.jpg",
+lg: "assets/images/one-project-page/image-5-1440px.jpg"
+} %}
+
+
+{% macro proportions() %}
+<section class="proportions">
+    <div class="container">
+        <div class="proportions__content">
+            <div class="proportions__top">
+                <div class="proportions__next">next project</div>
+                <h2 class="proportions__title">Perfect proportions</h2>
+            </div>
+            <div class="proportions__bottom">
+                {{picture(images, {class: "proportions__image", alt: "proportions", loading: "lazy"})}}
+            </div>
+        </div>
+    </div>
+</section>
+{% endmacro %}

@@ -1,0 +1,71 @@
+{% from "shared/ui/picture/picture.html" import picture %}
+{% from "shared/ui/button/button.html" import button %}
+
+{% set galleryImages = [
+{
+xs: "assets/images/one-project-page/image-1-375px.jpg",
+sm: "assets/images/one-project-page/image-1-768px.jpg",
+md: "assets/images/one-project-page/image-1-1024px.jpg",
+lg: "assets/images/one-project-page/image-1-1440px.jpg"
+},
+{
+xs: "assets/images/one-project-page/image-2-375px.jpg",
+sm: "assets/images/one-project-page/image-2-768px.jpg",
+md: "assets/images/one-project-page/image-2-1024px.jpg",
+lg: "assets/images/one-project-page/image-2-1440px.jpg"
+},
+{
+xs: "assets/images/one-project-page/image-3-375px.jpg",
+sm: "assets/images/one-project-page/image-3-768px.jpg",
+md: "assets/images/one-project-page/image-3-1024px.jpg",
+lg: "assets/images/one-project-page/image-3-1440px.jpg"
+},
+{
+xs: "assets/images/one-project-page/image-4-375px.jpg",
+sm: "assets/images/one-project-page/image-4-768px.jpg",
+md: "assets/images/one-project-page/image-4-1024px.jpg",
+lg: "assets/images/one-project-page/image-4-1440px.jpg"
+}
+] %}
+
+
+{% macro gallery() %}
+<section class="gallery">
+    <div class="container">
+        <div class="gallery__grid">
+            <div class="gallery__item">
+                {{picture(galleryImages[0], {
+                class: "gallery__img",
+                alt: "gallery",
+                loading: "lazy"
+                })}}
+            </div>
+            <div class="gallery__item">
+                {{picture(galleryImages[1], {
+                class: "gallery__img",
+                alt: "gallery",
+                loading: "lazy"
+                })}}
+            </div>
+            <div class="gallery__item">
+                {{picture(galleryImages[2], {
+                class: "gallery__img",
+                alt: "gallery",
+                loading: "lazy"
+                })}}
+            </div>
+            <div class="gallery__item">
+                {{picture(galleryImages[3], {
+                class: "gallery__img",
+                alt: "gallery",
+                loading: "lazy"
+                })}}
+            </div>
+        </div>
+        <div class="gallery__more">
+            {{button("View more photo", "button--primary button--black")}}
+        </div>
+    </div>
+
+</section>
+{% endmacro %}
