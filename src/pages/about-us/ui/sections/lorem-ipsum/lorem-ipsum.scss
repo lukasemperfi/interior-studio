@@ -1,0 +1,277 @@
+@use "../../../../../app/styles/variables" as variables;
+@use "../../../../../app/styles/mixins" as mixins;
+
+.lorem-ipsum {
+  &__container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    height: clamp(675px, 180vw, 831px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    @include mixins.respond(sm) {
+      height: 831px;
+    }
+
+    @include mixins.respond(md) {
+      height: clamp(790px, 77vw, 814px);
+    }
+
+    @include mixins.respond(lg) {
+      height: 814px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    max-width: 288px;
+
+    @include mixins.respond(sm) {
+      max-width: 390px;
+      gap: 24px;
+    }
+
+    @include mixins.respond(md) {
+      gap: 21px;
+    }
+
+    @include mixins.respond(lg) {
+      max-width: 427px;
+      gap: 18px;
+    }
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+
+    @include mixins.respond(sm) {
+      font-size: 44px;
+    }
+
+    @include mixins.respond(md) {
+      font-size: 48px;
+    }
+
+    @include mixins.respond(lg) {
+      font-size: 56px;
+    }
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: var(--color-text-primary);
+  }
+
+  &__image {
+    position: absolute;
+    object-fit: cover;
+  }
+
+  .image-1 {
+    @include mixins.responsive-size(156, 104, 249, 375);
+    @include mixins.position-percent(top, 98.55, left, -89, 375, 675);
+    z-index: 1;
+
+    @include mixins.respond(sm) {
+      @include mixins.responsive-size(249, 166, 295, 768);
+      @include mixins.position-percent(top, 199, left, -164, 768, 831);
+    }
+
+    @include mixins.respond(md) {
+      @include mixins.responsive-size(295, 196, 348, 1024);
+      @include mixins.position-percent(top, 217.66, left, -237, 1024, 790);
+    }
+
+    @include mixins.respond(lg) {
+      width: 348px;
+      aspect-ratio: 348/231;
+      @include mixins.position-percent(top, 184, left, -141, 1440, 814);
+    }
+  }
+
+  .image-2 {
+    @include mixins.responsive-size(122, 81, 194, 375);
+    @include mixins.position-percent(top, 37, left, 53, 375, 675);
+    z-index: 2;
+
+    @include mixins.respond(600) {
+      @include mixins.position-percent(top, 37, left, 25, 375, 675);
+    }
+
+    @include mixins.respond(sm) {
+      @include mixins.responsive-size(194, 129, 230, 768);
+      @include mixins.position-percent(top, 112, left, 40, 768, 831);
+    }
+
+    @include mixins.respond(md) {
+      @include mixins.responsive-size(230, 152, 271, 1024);
+      @include mixins.position-percent(top, 114.38, left, 4.26, 1024, 790);
+    }
+
+    @include mixins.respond(lg) {
+      @include mixins.position-percent(top, 62, left, 144, 1440, 814);
+      width: 271px;
+      aspect-ratio: 271/180;
+    }
+  }
+
+  .image-3 {
+    @include mixins.responsive-size(172, 114, 274, 375);
+    @include mixins.position-percent(top, 112, right, -92, 375, 675);
+    z-index: 3;
+
+    @include mixins.respond(sm) {
+      @include mixins.responsive-size(274, 182, 295, 768);
+      @include mixins.position-percent(top, -29.6, right, 90, 768, 831);
+    }
+
+    @include mixins.respond(md) {
+      @include mixins.responsive-size(295, 196, 348, 1024);
+      @include mixins.position-percent(top, -60, right, 276, 1024, 790);
+    }
+
+    @include mixins.respond(lg) {
+      width: 348px;
+      aspect-ratio: 348/231;
+      @include mixins.position-percent(top, -144, right, 319, 1440, 814);
+    }
+  }
+
+  .image-4 {
+    display: none;
+    z-index: 4;
+
+    @include mixins.respond(sm) {
+      display: block;
+
+      @include mixins.responsive-size(213, 141, 229, 768);
+      width: 213px;
+      height: 141px;
+      @include mixins.position-percent(top, 132.82, right, -73.88, 768, 831);
+    }
+
+    @include mixins.respond(md) {
+      @include mixins.responsive-size(229, 152, 271, 1024);
+      width: 229px;
+      height: 152px;
+      @include mixins.position-percent(top, 114.38, right, 100.33, 1024, 790);
+    }
+
+    @include mixins.respond(lg) {
+      width: 271px;
+      height: 180px;
+      @include mixins.position-percent(top, 62, right, 111, 1440, 814);
+    }
+  }
+
+  .image-5 {
+    z-index: 5;
+    @include mixins.responsive-size(198, 139, 316, 375);
+    @include mixins.position-percent(top, 413, right, -140, 375, 675);
+
+    @include mixins.respond(sm) {
+      @include mixins.responsive-size(316, 222, 340, 768);
+      @include mixins.position-percent(top, 481, right, -251, 768, 831);
+    }
+
+    @include mixins.respond(md) {
+      @include mixins.responsive-size(340, 238, 402, 1024);
+
+      @include mixins.position-percent(top, 424, right, -151, 1024, 790);
+    }
+
+    @include mixins.respond(lg) {
+      @include mixins.responsive-size(402, 282, 402, 1440);
+      @include mixins.position-percent(top, 428, right, -87, 1440, 814);
+    }
+  }
+
+  .image-6 {
+    z-index: 6;
+    @include mixins.position-percent(bottom, -12.21, right, 39.19, 375, 675);
+    @include mixins.responsive-size(105, 70, 168, 375);
+
+    @include mixins.respond(sm) {
+      @include mixins.responsive-size(168, 111, 181, 768);
+      @include mixins.position-percent(bottom, -21.55, right, 159.25, 768, 831);
+    }
+    @include mixins.respond(md) {
+      @include mixins.responsive-size(181, 120, 214, 1024);
+      @include mixins.position-percent(bottom, -0.76, right, 306.12, 1024, 790);
+    }
+    @include mixins.respond(lg) {
+      @include mixins.responsive-size(214, 142, 214, 1440);
+      @include mixins.position-percent(bottom, -47, right, 453, 1440, 814);
+    }
+  }
+
+  .image-7 {
+    z-index: 8;
+    @include mixins.responsive-size(105, 70, 224, 375);
+
+    @include mixins.position-percent(bottom, 144.79, left, 22, 375, 675);
+
+    @include mixins.respond(600) {
+      @include mixins.position-percent(bottom, 220, left, 60, 600, 831);
+    }
+
+    @include mixins.respond(sm) {
+      @include mixins.responsive-size(224, 149, 241, 768);
+      @include mixins.position-percent(bottom, 63.97, left, 45, 768, 831);
+    }
+
+    @include mixins.respond(md) {
+      @include mixins.responsive-size(241, 159, 285, 1024);
+
+      @include mixins.position-percent(bottom, 90.67, left, 57.84, 1024, 790);
+    }
+    @include mixins.respond(lg) {
+      width: 285px;
+      height: 189px;
+      @include mixins.position-percent(bottom, 61, left, 278, 1440, 814);
+    }
+  }
+
+  .image-8 {
+    z-index: 7;
+    @include mixins.responsive-size(146, 123, 271, 375);
+
+    @include mixins.position-percent(bottom, 69, left, -59, 375, 675);
+
+    @include mixins.respond(sm) {
+      display: none;
+    }
+
+    @include mixins.respond(lg) {
+      display: block;
+      width: 271px;
+      height: 180px;
+
+      @include mixins.position-percent(bottom, -90, left, -127, 1440, 814);
+    }
+  }
+
+  &_white {
+    background-color: var(--color-background-secondary);
+    .lorem-ipsum__title {
+      color: var(--color-text-secondary);
+    }
+    .lorem-ipsum__text {
+      color: var(--color-text-secondary);
+    }
+  }
+}

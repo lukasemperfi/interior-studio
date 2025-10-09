@@ -5,6 +5,7 @@
 {% from "shared/ui/make-request-modal/make-request-modal.html" import makeRequestModal %}
 {% from "shared/ui/succes-modal/succes-modal.html" import successModal %}
 {% from "pages/about-us/ui/sections/hero/hero.html" import hero %}
+{% from "pages/about-us/ui/sections/lorem-ipsum/lorem-ipsum.html" import loremIpsum %}
 
 {% set mobileMenuItems = [
 { "href": "/interior-studio/", "name": "Home" },
@@ -30,6 +31,7 @@
 
     {{ header("header_color_white") }}
     {{ hero() }}
+    {{ loremIpsum("lorem-ipsum_white") }}
 
 
     <div id="portal-root">
