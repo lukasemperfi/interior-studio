@@ -1,0 +1,79 @@
+@use "../../../../../app/styles/mixins" as mixins;
+
+.text {
+  padding-block: 80px;
+
+  @include mixins.respond(sm) {
+    padding-block: 104px;
+  }
+  @include mixins.respond(md) {
+    padding-block: 124px;
+  }
+  @include mixins.respond(lg) {
+    padding-block: 140px;
+  }
+
+  &__container {
+    padding-inline: 24px;
+
+    @include mixins.respond(sm) {
+      padding-inline: 124px;
+    }
+
+    @include mixins.respond(md) {
+      padding-inline: 159px;
+    }
+
+    @include mixins.respond(lg) {
+      padding-inline: 197px;
+    }
+  }
+
+  &__content {
+    max-width: 520px;
+
+    @include mixins.respond(sm) {
+      max-width: 706px;
+    }
+    @include mixins.respond(md) {
+      max-width: 602px;
+    }
+
+    @include mixins.respond(lg) {
+      max-width: 715px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--color-text-primary);
+    margin-bottom: 21px;
+
+    max-width: 419px;
+
+    @include mixins.respond(sm) {
+    }
+
+    @include mixins.respond(md) {
+      margin-bottom: 13px;
+    }
+  }
+
+  &__description {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--color-text-primary);
+    margin-bottom: 35px;
+
+    @include mixins.respond(sm) {
+      margin-bottom: 36px;
+    }
+    @include mixins.respond(md) {
+    }
+    @include mixins.respond(lg) {
+    }
+  }
+}

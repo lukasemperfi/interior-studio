@@ -7,6 +7,7 @@
 {% from "widgets/copyright/copyright.html" import copyright %}
 {% from "widgets/overlaping-cards/overlaping-cards.html" import overlapingCards %}
 {% from "pages/one-project/ui/sections/hero/hero.html" import hero %}
+{% from "pages/one-project/ui/sections/text/text.html" import text %}
 
 {% set mobileMenuItems = [
 { "href": "/", "name": "Home" },
@@ -73,6 +74,7 @@ image: "assets/images/projects-page/stack-10.jpg"
 
     {{ header() }}
     {{ hero() }}
+    {{ text() }}
     {{ overlapingCards(overlapingCardsArray) }}
 
 
