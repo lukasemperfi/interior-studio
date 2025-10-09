@@ -6,6 +6,7 @@
 {% from "shared/ui/succes-modal/succes-modal.html" import successModal %}
 {% from "pages/about-us/ui/sections/hero/hero.html" import hero %}
 {% from "pages/about-us/ui/sections/lorem-ipsum/lorem-ipsum.html" import loremIpsum %}
+{% from "pages/about-us/ui/footer/footer.html" import footer %}
 
 {% set mobileMenuItems = [
 { "href": "/interior-studio/", "name": "Home" },
@@ -33,7 +34,7 @@
     {{ hero() }}
     {{ loremIpsum("lorem-ipsum_white") }}
 
-
+    {{ footer() }}
     <div id="portal-root">
         <div class="nav-menu-mobile">
             <div class="nav-menu-mobile__content">
