@@ -13,6 +13,7 @@
 @use "../../pages/about-us/ui/sections/hero/hero.scss" as *;
 @use "../../pages/about-us/ui/sections/lorem-ipsum/lorem-ipsum.scss" as *;
 @use "../../pages/about-us/ui/footer/footer.scss" as *;
+@use "../../shared/ui/preloader/preloader.scss";
 
 .header {
   position: sticky;

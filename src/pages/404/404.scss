@@ -13,6 +13,7 @@
 @use "../../widgets/copyright/copyright.scss" as *;
 @use "../../pages/404/ui/not-found.scss" as *;
 @use "../../shared/ui/decorative-link/decorative-link.scss" as *;
+@use "../../shared/ui/preloader/preloader.scss";
 
 .not-found-page__wrapper {
   background-color: black;
