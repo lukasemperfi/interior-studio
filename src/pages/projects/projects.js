@@ -8,6 +8,32 @@ document.addEventListener("DOMContentLoaded", function () {
   initMakeRequestModal();
   initSelect(".hero__dropdown");
   initTabs(".hero__tabs", (value) => {
-    console.log(value);
+    const projectsList = document.querySelector(".projects-list__list");
+    const projectsListItems = Array.from(projectsList.children);
+
+    if (value === "house") {
+      projectsList.style.gridTemplateRows = "";
+
+      projectsListItems.forEach((project) => {
+        project.classList.remove("hidden");
+        project.style.gridArea = "";
+      });
+      return;
+    }
+
+    projectsList.style.gridTemplateRows = "1fr";
+
+    projectsListItems.forEach((project, index) => {
+      project.classList.add("hidden");
+
+      if (value === "apartments" && index === 0) {
+        project.classList.remove("hidden");
+      } else if (value === "commerce" && index === 1) {
+        project.classList.remove("hidden");
+        project.style.gridArea = "item-1";
+      } else if (value === "architecture" && index === 2) {
+        project.classList.remove("hidden");
+      }
+    });
   });
 });

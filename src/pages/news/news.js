@@ -8,6 +8,26 @@ document.addEventListener("DOMContentLoaded", function () {
   initMakeRequestModal();
   initSelect(".hero__dropdown");
   initTabs(".hero__tabs", (value) => {
-    console.log(value);
+    const newsList = document.querySelector(".news__list");
+    const newsListItems = Array.from(newsList.children);
+
+    if (value === "all") {
+      newsListItems.forEach((news) => {
+        news.classList.remove("hidden");
+      });
+      return;
+    }
+
+    newsListItems.forEach((news, index) => {
+      news.classList.add("hidden");
+
+      if (value === "blog" && index === 0) {
+        news.classList.remove("hidden");
+      } else if (value === "news" && index === 1) {
+        news.classList.remove("hidden");
+      } else if (value === "advice-from-the-designer" && index === 2) {
+        news.classList.remove("hidden");
+      }
+    });
   });
 });
