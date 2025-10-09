@@ -5,6 +5,7 @@
 {% from "shared/ui/make-request-modal/make-request-modal.html" import makeRequestModal %}
 {% from "shared/ui/succes-modal/succes-modal.html" import successModal %}
 {% from "widgets/copyright/copyright.html" import copyright %}
+{% from "shared/ui/preloader/preloader.html" import preloader %}
 
 {% set mobileMenuItems = [
 { "href": "/interior-studio/", "name": "Home" },
@@ -28,7 +29,6 @@
 </head>
 
 <body>
-
     {{ header() }}
 
     {% include "pages/home/ui/sections/hero/hero.html" %}
@@ -53,6 +53,7 @@
         </div>
         {{ makeRequestModal() }}
         {{ successModal() }}
+        {{ preloader() }}
     </div>
 </body>
 <script src="js/home.min.js"></script>

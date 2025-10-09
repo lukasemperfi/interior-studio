@@ -10,6 +10,7 @@
 {% from "pages/one-project/ui/sections/text/text.html" import text %}
 {% from "pages/one-project/ui/sections/gallery/gallery.html" import gallery %}
 {% from "pages/one-project/ui/sections/proportions/proportions.html" import proportions %}
+{% from "shared/ui/preloader/preloader.html" import preloader %}
 
 {% set mobileMenuItems = [
 { "href": "/interior-studio/", "name": "Home" },
@@ -96,6 +97,7 @@ image: "assets/images/projects-page/stack-10.jpg"
         </div>
         {{ makeRequestModal() }}
         {{ successModal() }}
+        {{ preloader() }}
     </div>
 </body>
 <script src="js/one-project.min.js"></script>

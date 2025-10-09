@@ -7,6 +7,7 @@
 {% from "pages/about-us/ui/sections/hero/hero.html" import hero %}
 {% from "pages/about-us/ui/sections/lorem-ipsum/lorem-ipsum.html" import loremIpsum %}
 {% from "pages/about-us/ui/footer/footer.html" import footer %}
+{% from "shared/ui/preloader/preloader.html" import preloader %}
 
 {% set mobileMenuItems = [
 { "href": "/interior-studio/", "name": "Home" },
@@ -49,6 +50,7 @@
         </div>
         {{ makeRequestModal() }}
         {{ successModal() }}
+        {{ preloader() }}
     </div>
 </body>
 <script src="js/about-us.min.js"></script>

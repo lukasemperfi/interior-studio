@@ -8,6 +8,7 @@
 {% from "pages/projects/ui/sections/hero/hero.html" import hero %}
 {% from "pages/projects/ui/sections/projects-list/projects-list.html" import projectsList %}
 {% from "widgets/overlaping-cards/overlaping-cards.html" import overlapingCards %}
+{% from "shared/ui/preloader/preloader.html" import preloader %}
 
 {% set mobileMenuItems = [
 { "href": "/interior-studio/", "name": "Home" },
@@ -94,6 +95,7 @@ image: "assets/images/projects-page/stack-10.jpg"
         </div>
         {{ makeRequestModal() }}
         {{ successModal() }}
+        {{ preloader() }}
     </div>
 </body>
 <script src="js/projects.min.js"></script>

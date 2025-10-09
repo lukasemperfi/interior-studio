@@ -8,6 +8,7 @@
 {% from "shared/ui/contacts-panel/contacts-panel.html" import contacts_panel %}
 {% from "shared/ui/make-request-modal/make-request-modal.html" import makeRequestModal %}
 {% from "shared/ui/succes-modal/succes-modal.html" import successModal %}
+{% from "shared/ui/preloader/preloader.html" import preloader %}
 
 {% set mobileMenuItems = [
 { "href": "/interior-studio/", "name": "Home" },
@@ -50,6 +51,7 @@
         </div>
         {{ makeRequestModal() }}
         {{ successModal() }}
+        {{ preloader() }}
     </div>
 </body>
 <script src="js/one-news.min.js"></script>
