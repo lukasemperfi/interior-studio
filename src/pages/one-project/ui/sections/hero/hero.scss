@@ -1,0 +1,170 @@
+@use "../../../../../app/styles/mixins" as mixins;
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  // align-items: center;
+
+  padding-block: 107px;
+
+  @include mixins.respond(sm) {
+    padding-block: 368px;
+  }
+
+  @include mixins.respond(md) {
+    padding-block: 232px;
+  }
+
+  @include mixins.respond(lg) {
+    padding-block: 262px;
+  }
+
+  &__container {
+    padding-inline: 24px;
+
+    @include mixins.respond(sm) {
+      padding-inline: 124px;
+    }
+
+    @include mixins.respond(md) {
+      padding-inline: 159px;
+    }
+
+    @include mixins.respond(lg) {
+      padding-inline: 197px;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    max-width: 464px;
+
+    @include mixins.respond(lg) {
+      max-width: 539px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--color-text-secondary);
+    max-width: 315px;
+    margin-bottom: 16px;
+
+    @include mixins.respond(sm) {
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
+    @include mixins.respond(md) {
+    }
+
+    @include mixins.respond(lg) {
+      font-size: 36px;
+      max-width: 540px;
+      margin-bottom: 22px;
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--color-text-secondary);
+    margin-bottom: 32px;
+
+    @include mixins.respond(sm) {
+    }
+
+    @include mixins.respond(md) {
+      margin-bottom: 48px;
+    }
+
+    @include mixins.respond(lg) {
+      margin-bottom: 65px;
+      max-width: 461px;
+    }
+  }
+
+  .info {
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: var(--color-text-secondary);
+    opacity: 0.6;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include mixins.respond(sm) {
+      flex-direction: row;
+      gap: 32px;
+    }
+
+    &__item {
+      display: grid;
+      grid-template-columns: 16px 1fr;
+      column-gap: 12px;
+    }
+
+    &__icon {
+      justify-self: center;
+    }
+
+    &__value {
+      align-self: center;
+    }
+  }
+
+  &__share {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    z-index: 1;
+
+    @include mixins.respond(sm) {
+      bottom: 32px;
+      left: 48px;
+      gap: 33px;
+    }
+    @include mixins.respond(md) {
+      left: 56px;
+      gap: 59px;
+    }
+
+    @include mixins.respond(lg) {
+      bottom: 40px;
+      left: 42px;
+      gap: 111px;
+    }
+  }
+
+  &__share-title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--color-text-secondary);
+  }
+
+  &__share-socials {
+    display: flex;
+    gap: 7px;
+  }
+}

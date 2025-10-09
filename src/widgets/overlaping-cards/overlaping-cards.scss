@@ -2,6 +2,7 @@
 
 .overlaping-cards-section {
   padding-block: 95px;
+  background-color: var(--color-background-secondary);
 
   @media (min-width: variables.$breakpoint-sm) {
     padding-block: 123px;
