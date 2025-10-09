@@ -1,0 +1,21 @@
+{% from "widgets/copyright/copyright.html" import copyright %}
+{% from "shared/ui/picture/picture.html" import picture %}
+
+{% set images = {
+xs: "assets/images/contacts/bg-375px.jpg",
+sm: "assets/images/contacts/bg-768px.jpg",
+md: "assets/images/contacts/bg-1024px.jpg",
+lg: "assets/images/contacts/bg-1440px.jpg"
+} %}
+
+{% macro footer() %}
+<footer class="contacts-footer">
+    {% include "widgets/sections/contacts/contacts.html" %}
+    {{ copyright() }}
+    {{ picture(images, {
+    class: "contacts-footer__image",
+    alt: "bg-image",
+    loading: "lazy"
+    }) }}
+</footer>
+{% endmacro %}
