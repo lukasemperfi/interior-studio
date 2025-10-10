@@ -8,6 +8,7 @@
 {% from "pages/about-us/ui/sections/lorem-ipsum/lorem-ipsum.html" import loremIpsum %}
 {% from "pages/about-us/ui/footer/footer.html" import footer %}
 {% from "shared/ui/preloader/preloader.html" import preloader %}
+{% from "pages/about-us/ui/sections/philosophy/philosophy.html" import philosophy %}
 
 {% set mobileMenuItems = [
 { "href": "/interior-studio/", "name": "Home" },
@@ -27,14 +28,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/about-us.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
 </head>
 
 <body>
 
     {{ header("header_color_white") }}
     {{ hero() }}
+    {{ philosophy() }}
     {{ loremIpsum("lorem-ipsum_white") }}
-
     {{ footer() }}
     <div id="portal-root">
         <div class="nav-menu-mobile">
@@ -50,9 +52,10 @@
         </div>
         {{ makeRequestModal() }}
         {{ successModal() }}
-        {{ preloader() }}
+        <!-- {{ preloader() }} -->
     </div>
 </body>
 <script src="js/about-us.min.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
 
 </html>
