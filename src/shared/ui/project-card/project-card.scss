@@ -12,6 +12,12 @@
       transform: scale(1.05);
       filter: brightness(0.8);
     }
+    .project-card__content {
+      @media (min-width: variables.$breakpoint-md) {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
   }
 
   &__image {
@@ -36,6 +42,12 @@
 
     @media (min-width: variables.$breakpoint-sm) {
       padding: 32px;
+    }
+
+    @media (min-width: variables.$breakpoint-md) {
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease-in-out;
     }
   }
 

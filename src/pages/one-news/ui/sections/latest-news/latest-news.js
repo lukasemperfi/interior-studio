@@ -2,6 +2,7 @@ import { initSwiper } from "../../../../../shared/lib/swiper/init-swiper.js";
 export const initLatestNews = () => {
   const latestNewsSlider = initSwiper(".latest-news__swiper", {
     slidesPerView: 1.193,
+    loop: true,
     spaceBetween: 26,
 
     breakpoints: {
