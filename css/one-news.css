@@ -1923,7 +1923,7 @@ body {
   color: #828282;
 }
 
-#preloader {
+.preloader {
   position: fixed;
   inset: 0;
   background: var(--color-background-secondary);
@@ -1941,8 +1941,7 @@ body {
   -webkit-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
 }
-
-.counter {
+.preloader .counter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1955,13 +1954,7 @@ body {
   font-size: 24px;
   letter-spacing: 0.26em;
 }
-
-.text {
+.preloader .text {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
-}
-
-.content {
-  text-align: center;
-  padding: 60px;
 }
