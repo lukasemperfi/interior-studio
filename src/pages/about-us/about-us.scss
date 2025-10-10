@@ -16,6 +16,7 @@
 @use "../../shared/ui/preloader/preloader.scss";
 @use "../../pages/about-us/ui/sections/philosophy/philosophy.scss" as *;
 @use "../../pages/home/ui/sections/hero/slider-nav.scss";
+@use "../../shared/ui/quote/quote.scss" as *;
 
 .header {
   position: sticky;
