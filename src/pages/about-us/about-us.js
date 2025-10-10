@@ -3,7 +3,7 @@ import { initMakeRequestModal } from "../../shared/ui/make-request-modal/make-re
 import { initPreloader } from "../../shared/ui/preloader/preloader.js";
 import { initPhilosophy } from "./ui/sections/philosophy/philosophy.js";
 
-// initPreloader();
+initPreloader();
 
 document.addEventListener("DOMContentLoaded", function () {
   initHeader();
